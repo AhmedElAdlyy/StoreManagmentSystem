@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStore.Designer.cs">
+      <DependentUpon>AddStore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -73,6 +79,10 @@
     <Compile Include="Models\Store_Item_Quantity.cs" />
     <Compile Include="Models\Supply_Invoice.cs" />
     <Compile Include="Models\Vendor.cs" />
+    <Compile Include="Repos\StoreDb.cs" />
+    <EmbeddedResource Include="AddStore.resx">
+      <DependentUpon>AddStore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +94,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -98,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory-3550551_1920.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

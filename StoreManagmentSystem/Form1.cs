@@ -16,5 +16,12 @@ namespace StoreManagmentSystem
         {
             InitializeComponent();
         }
+
+        private void newStoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddStore addStore = new AddStore();
+            addStore.MdiParent = this;
+            addStore.Show();
+        }
     }
 }
