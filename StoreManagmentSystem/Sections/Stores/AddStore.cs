@@ -45,7 +45,7 @@ namespace StoreManagmentSystem
                     MessageBox.Show("Data Is Incorrect");
                 }
 
-                
+
             }
             else
             {
@@ -57,7 +57,7 @@ namespace StoreManagmentSystem
         {
             bool isEmpty = true;
 
-            if(txt_Name.Text != string.Empty && txt_address.Text != string.Empty && txt_Employee.Text != string.Empty)
+            if (txt_Name.Text != string.Empty && txt_address.Text != string.Empty && txt_Employee.Text != string.Empty)
             {
                 isEmpty = false;
             }

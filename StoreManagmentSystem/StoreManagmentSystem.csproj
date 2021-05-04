@@ -55,10 +55,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Stores\AddStore.cs">
+    <Compile Include="Repos\MeasureDb.cs" />
+    <Compile Include="Sections\Measures\AddMeasure.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stores\AddStore.Designer.cs">
+    <Compile Include="Sections\Measures\AddMeasure.Designer.cs">
+      <DependentUpon>AddMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\Stores\AddStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Stores\AddStore.Designer.cs">
       <DependentUpon>AddStore.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs" />
@@ -80,19 +87,22 @@
     <Compile Include="Models\Supply_Invoice.cs" />
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Repos\StoreDb.cs" />
-    <Compile Include="Stores\DeleteStore.cs">
+    <Compile Include="Sections\Stores\DeleteStore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stores\DeleteStore.Designer.cs">
+    <Compile Include="Sections\Stores\DeleteStore.Designer.cs">
       <DependentUpon>DeleteStore.cs</DependentUpon>
     </Compile>
-    <Compile Include="Stores\EditStore.cs">
+    <Compile Include="Sections\Stores\EditStore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stores\EditStore.Designer.cs">
+    <Compile Include="Sections\Stores\EditStore.Designer.cs">
       <DependentUpon>EditStore.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Stores\AddStore.resx">
+    <EmbeddedResource Include="Sections\Measures\AddMeasure.resx">
+      <DependentUpon>AddMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Stores\AddStore.resx">
       <DependentUpon>AddStore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -108,10 +118,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Stores\DeleteStore.resx">
+    <EmbeddedResource Include="Sections\Stores\DeleteStore.resx">
       <DependentUpon>DeleteStore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stores\EditStore.resx">
+    <EmbeddedResource Include="Sections\Stores\EditStore.resx">
       <DependentUpon>EditStore.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -131,5 +141,6 @@
   <ItemGroup>
     <None Include="Resources\factory-3550551_1920.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

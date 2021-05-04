@@ -35,6 +35,10 @@ namespace StoreManagmentSystem
             this.newStoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editStoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteStoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.measuresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addMeasureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editMeasureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteMeasureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +47,8 @@ namespace StoreManagmentSystem
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.storesToolStripMenuItem});
+            this.storesToolStripMenuItem,
+            this.measuresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
@@ -81,6 +86,35 @@ namespace StoreManagmentSystem
             this.deleteStoreToolStripMenuItem.Text = "Delete Store";
             this.deleteStoreToolStripMenuItem.Click += new System.EventHandler(this.deleteStoreToolStripMenuItem_Click);
             // 
+            // measuresToolStripMenuItem
+            // 
+            this.measuresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addMeasureToolStripMenuItem,
+            this.editMeasureToolStripMenuItem,
+            this.deleteMeasureToolStripMenuItem});
+            this.measuresToolStripMenuItem.Name = "measuresToolStripMenuItem";
+            this.measuresToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.measuresToolStripMenuItem.Text = "Measures";
+            // 
+            // addMeasureToolStripMenuItem
+            // 
+            this.addMeasureToolStripMenuItem.Name = "addMeasureToolStripMenuItem";
+            this.addMeasureToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addMeasureToolStripMenuItem.Text = "New Measure";
+            this.addMeasureToolStripMenuItem.Click += new System.EventHandler(this.addMeasureToolStripMenuItem_Click);
+            // 
+            // editMeasureToolStripMenuItem
+            // 
+            this.editMeasureToolStripMenuItem.Name = "editMeasureToolStripMenuItem";
+            this.editMeasureToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.editMeasureToolStripMenuItem.Text = "Edit Measure";
+            // 
+            // deleteMeasureToolStripMenuItem
+            // 
+            this.deleteMeasureToolStripMenuItem.Name = "deleteMeasureToolStripMenuItem";
+            this.deleteMeasureToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.deleteMeasureToolStripMenuItem.Text = "Delete Measure";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -109,6 +143,10 @@ namespace StoreManagmentSystem
         private System.Windows.Forms.ToolStripMenuItem newStoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editStoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteStoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem measuresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addMeasureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editMeasureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteMeasureToolStripMenuItem;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using StoreManagmentSystem.Stores;
+﻿using StoreManagmentSystem.Sections.Measures;
+using StoreManagmentSystem.Stores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,13 @@ namespace StoreManagmentSystem
             DeleteStore deleteStore = new DeleteStore();
             deleteStore.MdiParent = this;
             deleteStore.Show();
+        }
+
+        private void addMeasureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMeasure addMeasure = new AddMeasure();
+            addMeasure.MdiParent = this;
+            addMeasure.Show();
         }
     }
 }
