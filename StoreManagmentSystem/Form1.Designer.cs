@@ -63,21 +63,23 @@ namespace StoreManagmentSystem
             // newStoreToolStripMenuItem
             // 
             this.newStoreToolStripMenuItem.Name = "newStoreToolStripMenuItem";
-            this.newStoreToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
+            this.newStoreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.newStoreToolStripMenuItem.Text = "New Store";
             this.newStoreToolStripMenuItem.Click += new System.EventHandler(this.newStoreToolStripMenuItem_Click);
             // 
             // editStoreToolStripMenuItem
             // 
             this.editStoreToolStripMenuItem.Name = "editStoreToolStripMenuItem";
-            this.editStoreToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
+            this.editStoreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.editStoreToolStripMenuItem.Text = "Edit Store";
+            this.editStoreToolStripMenuItem.Click += new System.EventHandler(this.editStoreToolStripMenuItem_Click);
             // 
             // deleteStoreToolStripMenuItem
             // 
             this.deleteStoreToolStripMenuItem.Name = "deleteStoreToolStripMenuItem";
-            this.deleteStoreToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
+            this.deleteStoreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.deleteStoreToolStripMenuItem.Text = "Delete Store";
+            this.deleteStoreToolStripMenuItem.Click += new System.EventHandler(this.deleteStoreToolStripMenuItem_Click);
             // 
             // Form1
             // 

@@ -25,7 +25,12 @@ namespace StoreManagmentSystem.Repos
 
         public Store EditStore(Store str)
         {
-            db.Entry(str).State = System.Data.Entity.EntityState.Modified;
+            var store = GetStoreById(str.ID);
+
+            store.Name = str.Name;
+            store.Address = str.Address;
+            store.Responsible_Employee = str.Responsible_Employee;
+
             db.SaveChanges();
 
             return str;
@@ -34,6 +39,17 @@ namespace StoreManagmentSystem.Repos
         public List<Store> GetAllStores()
         {
             return db.Stores.ToList();
+        }
+
+        public void DeleteStoreByStore(Store store)
+        {
+            db.Stores.Remove(store);
+            db.SaveChanges();
+        }
+
+        public void DeleteStoreById(int id)
+        {
+            DeleteStoreByStore(GetStoreById(id));
         }
     }
 }

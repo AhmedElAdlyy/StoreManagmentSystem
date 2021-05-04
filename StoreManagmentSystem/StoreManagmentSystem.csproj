@@ -55,10 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddStore.cs">
+    <Compile Include="Stores\AddStore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStore.Designer.cs">
+    <Compile Include="Stores\AddStore.Designer.cs">
       <DependentUpon>AddStore.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs" />
@@ -80,7 +80,19 @@
     <Compile Include="Models\Supply_Invoice.cs" />
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Repos\StoreDb.cs" />
-    <EmbeddedResource Include="AddStore.resx">
+    <Compile Include="Stores\DeleteStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stores\DeleteStore.Designer.cs">
+      <DependentUpon>DeleteStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stores\EditStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stores\EditStore.Designer.cs">
+      <DependentUpon>EditStore.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Stores\AddStore.resx">
       <DependentUpon>AddStore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -96,6 +108,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Stores\DeleteStore.resx">
+      <DependentUpon>DeleteStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stores\EditStore.resx">
+      <DependentUpon>EditStore.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
