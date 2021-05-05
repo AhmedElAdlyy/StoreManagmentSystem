@@ -32,8 +32,8 @@ namespace StoreManagmentSystem.Stores
         private void btn_delete_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are You Sure Deleting This Store ?", "Delete Confirmation", MessageBoxButtons.YesNo);
-            
-            if(dialogResult == DialogResult.Yes)
+
+            if (dialogResult == DialogResult.Yes)
             {
                 try
                 {
@@ -45,8 +45,9 @@ namespace StoreManagmentSystem.Stores
                 {
                     MessageBox.Show("something went wrong");
                 }
-                
-            }else if(dialogResult == DialogResult.No)
+
+            }
+            else if (dialogResult == DialogResult.No)
             {
                 gb_storeData.Visible = false;
             }

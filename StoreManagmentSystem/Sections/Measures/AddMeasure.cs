@@ -39,7 +39,7 @@ namespace StoreManagmentSystem.Sections.Measures
 
                     MessageBox.Show("Somethig wrong");
                 }
-                
+
             }
             else
             {
@@ -52,7 +52,7 @@ namespace StoreManagmentSystem.Sections.Measures
         {
             bool isEmpty = true;
 
-            if(txt_main.Text != string.Empty && txt_quantity.Text != string.Empty && txt_sub.Text != string.Empty)
+            if (txt_main.Text != string.Empty && txt_quantity.Text != string.Empty && txt_sub.Text != string.Empty)
             {
                 isEmpty = false;
             }

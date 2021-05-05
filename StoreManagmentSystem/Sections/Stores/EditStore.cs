@@ -46,24 +46,34 @@ namespace StoreManagmentSystem.Stores
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            Store newStore = new Store
-            {
-                ID = int.Parse(txt_storeId_hide.Text),
-                Name = txt_Name.Text,
-                Address = txt_address.Text,
-                Responsible_Employee = txt_Employee.Text
-            };
 
-            try
+            if (!isEmpty())
             {
-                db.EditStore(newStore);
-                MessageBox.Show("Store Updated Successfully");
-                RefreshCb_AllStores();
+                Store newStore = new Store
+                {
+                    ID = int.Parse(txt_storeId_hide.Text),
+                    Name = txt_Name.Text,
+                    Address = txt_address.Text,
+                    Responsible_Employee = txt_Employee.Text
+                };
+
+                try
+                {
+                    db.EditStore(newStore);
+                    MessageBox.Show("Store Updated Successfully");
+                    RefreshCb_AllStores();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Something went wrong try again");
+                }
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Something went wrong try again");
+                MessageBox.Show("All fields are required to edit");
             }
+
+            
         }
 
         private void RefreshCb_AllStores()
@@ -71,6 +81,19 @@ namespace StoreManagmentSystem.Stores
             gb_storeData.Visible = false;
             cb_allStores.DataSource = null;
             SettingCb_allStores();
+        }
+
+        private bool isEmpty()
+        {
+            bool isEmpty = true;
+
+            if (txt_Name.Text != string.Empty && txt_address.Text != string.Empty && txt_Employee.Text != string.Empty)
+            {
+                isEmpty = false;
+            }
+
+            return isEmpty;
+
         }
     }
 }

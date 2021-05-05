@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoreManagmentSystem.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -50,6 +51,24 @@ namespace StoreManagmentSystem.Repos
         {
             db.Measures.Remove(measure);
             db.SaveChanges();
+        }
+
+        public List<AllMeasuresCb> settingDisplayOfCb_AllMeasures(List<Measure> measures)
+        {
+            List<AllMeasuresCb> allMeasures = new List<AllMeasuresCb>();
+
+            foreach (var measure in measures)
+            {
+                AllMeasuresCb m = new AllMeasuresCb
+                {
+                    Id = measure.ID,
+                    Description = measure.Main_Measure + " - " + measure.Sub_Measure + " - " + measure.Quantity
+                };
+
+                allMeasures.Add(m);
+            }
+
+            return allMeasures;
         }
     }
 }

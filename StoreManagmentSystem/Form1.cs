@@ -46,5 +46,19 @@ namespace StoreManagmentSystem
             addMeasure.MdiParent = this;
             addMeasure.Show();
         }
+
+        private void editMeasureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditMeasure editMeasure = new EditMeasure();
+            editMeasure.MdiParent = this;
+            editMeasure.Show();
+        }
+
+        private void deleteMeasureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteMeasure deleteMeasure = new DeleteMeasure();
+            deleteMeasure.MdiParent = this;
+            deleteMeasure.Show();
+        }
     }
 }

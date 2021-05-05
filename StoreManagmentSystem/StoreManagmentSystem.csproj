@@ -62,6 +62,18 @@
     <Compile Include="Sections\Measures\AddMeasure.Designer.cs">
       <DependentUpon>AddMeasure.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sections\Measures\DeleteMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Measures\DeleteMeasure.Designer.cs">
+      <DependentUpon>DeleteMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\Measures\EditMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Measures\EditMeasure.Designer.cs">
+      <DependentUpon>EditMeasure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sections\Stores\AddStore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,8 +111,15 @@
     <Compile Include="Sections\Stores\EditStore.Designer.cs">
       <DependentUpon>EditStore.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AllMeasuresCb.cs" />
     <EmbeddedResource Include="Sections\Measures\AddMeasure.resx">
       <DependentUpon>AddMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Measures\DeleteMeasure.resx">
+      <DependentUpon>DeleteMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Measures\EditMeasure.resx">
+      <DependentUpon>EditMeasure.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sections\Stores\AddStore.resx">
       <DependentUpon>AddStore.cs</DependentUpon>
