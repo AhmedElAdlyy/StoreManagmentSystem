@@ -55,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssisstantClasses\Assisstant.cs" />
+    <Compile Include="Repos\CustomerDb.cs" />
     <Compile Include="Repos\MeasureDb.cs" />
     <Compile Include="Sections\Measures\AddMeasure.cs">
       <SubType>Form</SubType>
@@ -73,6 +75,24 @@
     </Compile>
     <Compile Include="Sections\Measures\EditMeasure.Designer.cs">
       <DependentUpon>EditMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\Stackholders\Customers\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Stackholders\Customers\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\Stackholders\Customers\DeleteCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Stackholders\Customers\DeleteCustomer.Designer.cs">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\Stackholders\Customers\EditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Stackholders\Customers\EditCustomer.Designer.cs">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Sections\Stores\AddStore.cs">
       <SubType>Form</SubType>
@@ -121,6 +141,15 @@
     <EmbeddedResource Include="Sections\Measures\EditMeasure.resx">
       <DependentUpon>EditMeasure.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Stackholders\Customers\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Stackholders\Customers\DeleteCustomer.resx">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Stackholders\Customers\EditCustomer.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sections\Stores\AddStore.resx">
       <DependentUpon>AddStore.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +189,8 @@
   <ItemGroup>
     <None Include="Resources\factory-3550551_1920.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Sections\Stackholders\Vendors\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

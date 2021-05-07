@@ -39,6 +39,15 @@ namespace StoreManagmentSystem
             this.addMeasureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editMeasureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteMeasureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stackholdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +57,8 @@ namespace StoreManagmentSystem
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.storesToolStripMenuItem,
-            this.measuresToolStripMenuItem});
+            this.measuresToolStripMenuItem,
+            this.stackholdersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
@@ -99,23 +109,91 @@ namespace StoreManagmentSystem
             // addMeasureToolStripMenuItem
             // 
             this.addMeasureToolStripMenuItem.Name = "addMeasureToolStripMenuItem";
-            this.addMeasureToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addMeasureToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
             this.addMeasureToolStripMenuItem.Text = "New Measure";
             this.addMeasureToolStripMenuItem.Click += new System.EventHandler(this.addMeasureToolStripMenuItem_Click);
             // 
             // editMeasureToolStripMenuItem
             // 
             this.editMeasureToolStripMenuItem.Name = "editMeasureToolStripMenuItem";
-            this.editMeasureToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.editMeasureToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
             this.editMeasureToolStripMenuItem.Text = "Edit Measure";
             this.editMeasureToolStripMenuItem.Click += new System.EventHandler(this.editMeasureToolStripMenuItem_Click);
             // 
             // deleteMeasureToolStripMenuItem
             // 
             this.deleteMeasureToolStripMenuItem.Name = "deleteMeasureToolStripMenuItem";
-            this.deleteMeasureToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.deleteMeasureToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
             this.deleteMeasureToolStripMenuItem.Text = "Delete Measure";
             this.deleteMeasureToolStripMenuItem.Click += new System.EventHandler(this.deleteMeasureToolStripMenuItem_Click);
+            // 
+            // stackholdersToolStripMenuItem
+            // 
+            this.stackholdersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vendorToolStripMenuItem,
+            this.customerToolStripMenuItem});
+            this.stackholdersToolStripMenuItem.Name = "stackholdersToolStripMenuItem";
+            this.stackholdersToolStripMenuItem.Size = new System.Drawing.Size(128, 29);
+            this.stackholdersToolStripMenuItem.Text = "Stackholders";
+            // 
+            // vendorToolStripMenuItem
+            // 
+            this.vendorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.vendorToolStripMenuItem.Name = "vendorToolStripMenuItem";
+            this.vendorToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.vendorToolStripMenuItem.Text = "Vendor";
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
+            this.newToolStripMenuItem.Text = "New...";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
+            this.editToolStripMenuItem.Text = "Edit...";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            // 
+            // customerToolStripMenuItem
+            // 
+            this.customerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem1,
+            this.editToolStripMenuItem1,
+            this.deleteToolStripMenuItem1});
+            this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.customerToolStripMenuItem.Text = "Customer";
+            // 
+            // newToolStripMenuItem1
+            // 
+            this.newToolStripMenuItem1.Name = "newToolStripMenuItem1";
+            this.newToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.newToolStripMenuItem1.Text = "New...";
+            this.newToolStripMenuItem1.Click += new System.EventHandler(this.newToolStripMenuItem1_Click);
+            // 
+            // editToolStripMenuItem1
+            // 
+            this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.editToolStripMenuItem1.Text = "Edit...";
+            this.editToolStripMenuItem1.Click += new System.EventHandler(this.editToolStripMenuItem1_Click);
+            // 
+            // deleteToolStripMenuItem1
+            // 
+            this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
+            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.deleteToolStripMenuItem1.Text = "Delete";
+            this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -149,6 +227,15 @@ namespace StoreManagmentSystem
         private System.Windows.Forms.ToolStripMenuItem addMeasureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editMeasureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteMeasureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stackholdersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vendorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem1;
     }
 }
 
