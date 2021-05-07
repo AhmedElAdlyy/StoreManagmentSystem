@@ -23,13 +23,18 @@ namespace StoreManagmentSystem.Sections.Invoices
         MeasureDb measureDb = new MeasureDb();
         Assisstant assisstant = new Assisstant();
 
-        List<SupplyInvoiceViewModel> supplyInvoices = new List<SupplyInvoiceViewModel>();
         List<SupplyInvoiceDataGridViewModel> dataGridViewModels = new List<SupplyInvoiceDataGridViewModel>();
+        FullSupplyInvoice fullSupplyInvoice = new FullSupplyInvoice();
 
         public SupplyInvoice()
         {
             InitializeComponent();
             SettingMainInfoSection();
+
+            if(fullSupplyInvoice.SupplyInvoiceDetails == null)
+            {
+                fullSupplyInvoice.SupplyInvoiceDetails = new List<SupplyInvoiceViewModel>();
+            }
         }
 
         private void SettingMainInfoSection()
@@ -59,6 +64,8 @@ namespace StoreManagmentSystem.Sections.Invoices
 
             assisstant.FillCb<Store>(cb_store, "Name", "ID", storeDb.GetAllStores());
             assisstant.FillCb<AllItemsCb>(cb_item, "NameAndCode", "Id", assisstant.SettingDisplayOfCb_AllItems(ItemDb.GetAllItems()));
+
+            gb_mainInfo.Enabled = false;
         }
 
         private void cb_item_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,56 +78,56 @@ namespace StoreManagmentSystem.Sections.Invoices
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            
-            SupplyInvoiceViewModel supplyInvoice = new SupplyInvoiceViewModel
+            fullSupplyInvoice.VendorId = int.Parse(cb_ven.SelectedValue.ToString());
+            fullSupplyInvoice.InvoiceDate = Convert.ToDateTime(lb_date.Text);
+            fullSupplyInvoice.InvoiceNo = int.Parse(lb_invoiceNumber.Text);
+
+            SupplyInvoiceViewModel supplyInvoiceViewModel = new SupplyInvoiceViewModel
             {
-                ExpiringDate = dp_ExpiringDate.Text,
+                ExpiringDate = Convert.ToDateTime(dp_ExpiringDate.Value),
                 ItemId = int.Parse(cb_item.SelectedValue.ToString()),
                 Note = txt_note.Text,
-                ProductionDate = dp_ExpiringDate.Text,
+                ProductionDate = Convert.ToDateTime(dp_productionDate.Value),
                 Quantity = (int)nud_quantity.Value,
-                StoreId=int.Parse(cb_store.SelectedValue.ToString()),
-                UsedUnit = cb_measures.Text
+                StoreId = int.Parse(cb_store.SelectedValue.ToString()),
+                UsedUnit = cb_measures.SelectedItem.ToString()
             };
 
-            supplyInvoices.Add(supplyInvoice);
+            fullSupplyInvoice.SupplyInvoiceDetails.Add(supplyInvoiceViewModel);
 
-            DisplayDataGridView(supplyInvoice);
+            DisplayDataGridView(fullSupplyInvoice);
         }
 
-        private void DisplayDataGridView(SupplyInvoiceViewModel supplyInvoice)
+        private void DisplayDataGridView(FullSupplyInvoice supplyInvoice)
         {
 
-            if(dg_invoiceDetails.Visible == false)
+            if (dg_invoiceDetails.Visible == false)
             {
                 dg_invoiceDetails.Visible = true;
             }
+            dataGridViewModels.Clear();
 
-            SupplyInvoiceDataGridViewModel supplyInvoiceDataGrid = new SupplyInvoiceDataGridViewModel
+            foreach (var details in supplyInvoice.SupplyInvoiceDetails)
             {
-                ExpiringDate = supplyInvoice.ExpiringDate,
-                ItemName = ItemDb.GetItemById(supplyInvoice.ItemId).Name,
-                Note = supplyInvoice.Note,
-                ProductionDate = supplyInvoice.ProductionDate,
-                Quantity = supplyInvoice.Quantity,
-                StoreName = storeDb.GetStoreById(supplyInvoice.StoreId).Name,
-                UsedUnit = supplyInvoice.UsedUnit
-            };
+                SupplyInvoiceDataGridViewModel supplyInvoiceDataGrid = new SupplyInvoiceDataGridViewModel
+                {
+                    ExpiringDate = details.ExpiringDate.ToString("dd/MM/yyyy"),
+                    UsedUnit = details.UsedUnit,
+                    ItemName = ItemDb.GetItemById(details.ItemId).Name,
+                    Note = details.Note,
+                    ProductionDate = details.ProductionDate.ToString("dd/MM/yyyy"),
+                    Quantity = details.Quantity,
+                    StoreName = storeDb.GetStoreById(details.StoreId).Name
+                };
+                dataGridViewModels.Add(supplyInvoiceDataGrid);
+            }
 
-            dataGridViewModels.Add(supplyInvoiceDataGrid);
             dg_invoiceDetails.DataSource = null;
             dg_invoiceDetails.DataSource = dataGridViewModels;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FullSupplyInvoice fullSupplyInvoice = new FullSupplyInvoice
-            {
-                InvoiceDate = Convert.ToDateTime(lb_date.Text),
-                InvoiceNo = int.Parse(lb_invoiceNumber.Text),
-                VendorId = int.Parse(cb_ven.SelectedValue.ToString()),
-                SupplyInvoiceDetails = supplyInvoices
-            };
             try
             {
                 db.AddSupplyInvoice(fullSupplyInvoice);
@@ -131,7 +138,7 @@ namespace StoreManagmentSystem.Sections.Invoices
             {
                 MessageBox.Show("Something Went Wrong");
             }
-            
+
         }
     }
 }

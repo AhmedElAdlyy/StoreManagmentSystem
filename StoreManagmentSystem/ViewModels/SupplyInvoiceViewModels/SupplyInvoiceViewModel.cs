@@ -13,8 +13,8 @@ namespace StoreManagmentSystem.ViewModels
         public int StoreId { get; set; }
         public string UsedUnit { get; set; }
         public int Quantity { get; set; }
-        public string ProductionDate { get; set; }
-        public string ExpiringDate { get; set; }
+        public DateTime ProductionDate { get; set; }
+        public DateTime ExpiringDate { get; set; }
         public string Note { get; set; }
     }
 }

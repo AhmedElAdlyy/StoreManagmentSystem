@@ -22,8 +22,8 @@ namespace StoreManagmentSystem.Repos
             {
                 Store_Item store_Item = new Store_Item
                 {
-                    Expiring_Date = Convert.ToDateTime(supplyInvoice.ExpiringDate),
-                    Production_Date = Convert.ToDateTime(supplyInvoice.ProductionDate),
+                    Expiring_Date = supplyInvoice.ExpiringDate,
+                    Production_Date = supplyInvoice.ProductionDate,
                     Store_ID = supplyInvoice.StoreId,
                     Item_ID = supplyInvoice.ItemId
                 };

@@ -178,7 +178,7 @@
     </Compile>
     <Compile Include="ViewModels\AllItemsCb.cs" />
     <Compile Include="ViewModels\AllMeasuresCb.cs" />
-    <Compile Include="ViewModels\FullSupplyInvoice.cs" />
+    <Compile Include="ViewModels\SupplyInvoiceViewModels\FullSupplyInvoice.cs" />
     <Compile Include="ViewModels\SupplyInvoiceViewModels\SupplyInvoiceDataGridViewModel.cs" />
     <Compile Include="ViewModels\SupplyInvoiceViewModels\SupplyInvoiceViewModel.cs" />
     <EmbeddedResource Include="Sections\Invoices\SupplyInvoice.resx">
