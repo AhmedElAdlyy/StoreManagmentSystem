@@ -57,8 +57,27 @@
   <ItemGroup>
     <Compile Include="AssisstantClasses\Assisstant.cs" />
     <Compile Include="Repos\CustomerDb.cs" />
+    <Compile Include="Repos\ItemDb.cs" />
     <Compile Include="Repos\MeasureDb.cs" />
     <Compile Include="Repos\VendorDb.cs" />
+    <Compile Include="Sections\Items\AddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Items\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\Items\DeleteItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Items\DeleteItem.Designer.cs">
+      <DependentUpon>DeleteItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\Items\EditItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Items\EditItem.Designer.cs">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sections\Measures\AddMeasure.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,7 +169,17 @@
     <Compile Include="Sections\Stores\EditStore.Designer.cs">
       <DependentUpon>EditStore.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AllItemsCb.cs" />
     <Compile Include="ViewModels\AllMeasuresCb.cs" />
+    <EmbeddedResource Include="Sections\Items\AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Items\DeleteItem.resx">
+      <DependentUpon>DeleteItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Items\EditItem.resx">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sections\Measures\AddMeasure.resx">
       <DependentUpon>AddMeasure.cs</DependentUpon>
     </EmbeddedResource>

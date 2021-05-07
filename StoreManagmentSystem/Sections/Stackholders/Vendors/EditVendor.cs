@@ -30,10 +30,7 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
 
             List<Vendor> vendors = db.GetAllVedors();
 
-            cb_ven.DisplayMember = filter;
-            cb_ven.ValueMember = "ID";
-
-            cb_ven.DataSource = vendors;
+            assisstant.FillCb<Vendor>(cb_ven, filter, "ID", vendors);
         }
 
         private void btn_select_Click(object sender, EventArgs e)
@@ -87,6 +84,13 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
         private void RefreshAll()
         {
             gb_venData.Visible = false;
+            cb_ven.DataSource = null;
+            cb_viewBy.Items.Clear();
+            assisstant.SettingCbFromLabelsText(gb_venData, cb_viewBy);
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
             cb_ven.DataSource = null;
             cb_viewBy.Items.Clear();
             assisstant.SettingCbFromLabelsText(gb_venData, cb_viewBy);

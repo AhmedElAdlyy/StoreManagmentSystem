@@ -57,5 +57,9 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customer
             }
         }
 
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            assisstant.ClearForm(gb_cstData);
+        }
     }
 }

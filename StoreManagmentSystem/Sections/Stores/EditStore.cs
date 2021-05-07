@@ -1,4 +1,5 @@
-﻿using StoreManagmentSystem.Repos;
+﻿using StoreManagmentSystem.AssisstantClasses;
+using StoreManagmentSystem.Repos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,19 +16,11 @@ namespace StoreManagmentSystem.Stores
     {
 
         StoreDb db = new StoreDb();
+        Assisstant assisstant = new Assisstant();
         public EditStore()
         {
             InitializeComponent();
-            SettingCb_allStores();
-        }
-
-        private void SettingCb_allStores()
-        {
-            List<Store> stores = db.GetAllStores();
-
-            cb_allStores.DisplayMember = "Name";
-            cb_allStores.ValueMember = "ID";
-            cb_allStores.DataSource = stores;
+            assisstant.FillCb<Store>(cb_allStores, "Name", "ID", db.GetAllStores());
         }
 
         private void btn_select_Click(object sender, EventArgs e)
@@ -47,7 +40,7 @@ namespace StoreManagmentSystem.Stores
         private void btn_edit_Click(object sender, EventArgs e)
         {
 
-            if (!isEmpty())
+            if (!assisstant.CheckIfFormIsEmpty(gb_storeData)) 
             {
                 Store newStore = new Store
                 {
@@ -80,20 +73,12 @@ namespace StoreManagmentSystem.Stores
         {
             gb_storeData.Visible = false;
             cb_allStores.DataSource = null;
-            SettingCb_allStores();
+            assisstant.FillCb<Store>(cb_allStores, "Name", "ID", db.GetAllStores());
         }
 
-        private bool isEmpty()
+        private void btn_refresh_Click(object sender, EventArgs e)
         {
-            bool isEmpty = true;
-
-            if (txt_Name.Text != string.Empty && txt_address.Text != string.Empty && txt_Employee.Text != string.Empty)
-            {
-                isEmpty = false;
-            }
-
-            return isEmpty;
-
+            RefreshCb_AllStores();
         }
     }
 }

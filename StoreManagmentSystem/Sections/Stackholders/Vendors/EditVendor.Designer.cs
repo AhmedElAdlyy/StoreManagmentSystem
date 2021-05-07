@@ -50,6 +50,7 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
             this.lb_cst = new System.Windows.Forms.Label();
             this.cb_viewBy = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.gb_venData.SuspendLayout();
             this.gb_selectVendor.SuspendLayout();
             this.SuspendLayout();
@@ -251,11 +252,22 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
             this.label1.TabIndex = 0;
             this.label1.Text = "View By";
             // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Location = new System.Drawing.Point(12, 526);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(93, 32);
+            this.btn_refresh.TabIndex = 4;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            // 
             // EditVendor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1103, 570);
+            this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.gb_venData);
             this.Controls.Add(this.gb_selectVendor);
             this.Name = "EditVendor";
@@ -291,5 +303,6 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
         private System.Windows.Forms.Label lb_cst;
         private System.Windows.Forms.ComboBox cb_viewBy;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }

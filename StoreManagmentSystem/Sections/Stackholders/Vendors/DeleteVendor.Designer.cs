@@ -30,6 +30,7 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
         private void InitializeComponent()
         {
             this.gb_venData = new System.Windows.Forms.GroupBox();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.txt_venId_hide = new System.Windows.Forms.TextBox();
             this.txt_venTel = new System.Windows.Forms.TextBox();
             this.txt_venWebsite = new System.Windows.Forms.TextBox();
@@ -49,7 +50,7 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
             this.lb_cst = new System.Windows.Forms.Label();
             this.cb_viewBy = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.gb_venData.SuspendLayout();
             this.gb_selectVendor.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +78,19 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
             this.gb_venData.TabStop = false;
             this.gb_venData.Text = "Vendor Data";
             this.gb_venData.Visible = false;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_delete.Location = new System.Drawing.Point(190, 492);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(110, 43);
+            this.btn_delete.TabIndex = 26;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // txt_venId_hide
             // 
@@ -247,24 +261,22 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
             this.label1.TabIndex = 0;
             this.label1.Text = "View By";
             // 
-            // btn_delete
+            // btn_refresh
             // 
-            this.btn_delete.BackColor = System.Drawing.Color.DarkRed;
-            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_delete.Location = new System.Drawing.Point(190, 492);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(110, 43);
-            this.btn_delete.TabIndex = 26;
-            this.btn_delete.Text = "Delete";
-            this.btn_delete.UseVisualStyleBackColor = false;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            this.btn_refresh.Location = new System.Drawing.Point(12, 526);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(93, 32);
+            this.btn_refresh.TabIndex = 6;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // DeleteVendor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1103, 570);
+            this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.gb_venData);
             this.Controls.Add(this.gb_selectVendor);
             this.Name = "DeleteVendor";
@@ -300,5 +312,6 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
         private System.Windows.Forms.ComboBox cb_viewBy;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }

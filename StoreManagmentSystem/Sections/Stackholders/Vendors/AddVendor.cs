@@ -53,5 +53,10 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
                 MessageBox.Show("All fields are requires");
             }
         }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            assisstant.ClearForm(gb_venData);
+        }
     }
 }

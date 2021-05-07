@@ -1,4 +1,5 @@
-﻿using StoreManagmentSystem.Repos;
+﻿using StoreManagmentSystem.AssisstantClasses;
+using StoreManagmentSystem.Repos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace StoreManagmentSystem.Sections.Measures
     public partial class AddMeasure : Form
     {
         MeasureDb db = new MeasureDb();
+        Assisstant assisstant = new Assisstant();
         public AddMeasure()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace StoreManagmentSystem.Sections.Measures
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            if (!IsEmpty())
+            if (!assisstant.CheckIfFormIsEmpty(gb_measure))
             {
                 Measure measure = new Measure
                 {
@@ -36,7 +38,6 @@ namespace StoreManagmentSystem.Sections.Measures
                 }
                 catch (Exception)
                 {
-
                     MessageBox.Show("Somethig wrong");
                 }
 
@@ -47,16 +48,5 @@ namespace StoreManagmentSystem.Sections.Measures
             }
         }
 
-
-        private bool IsEmpty()
-        {
-            bool isEmpty = true;
-
-            if (txt_main.Text != string.Empty && txt_quantity.Text != string.Empty && txt_sub.Text != string.Empty)
-            {
-                isEmpty = false;
-            }
-            return isEmpty;
-        }
     }
 }

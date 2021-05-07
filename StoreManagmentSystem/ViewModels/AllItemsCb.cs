@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace StoreManagmentSystem.ViewModels
 {
-    public class AllMeasuresCb
+    public class AllItemsCb
     {
         public int Id { get; set; }
-        public string Description { get; set; }
+        public string NameAndCode { get; set; }
     }
 }

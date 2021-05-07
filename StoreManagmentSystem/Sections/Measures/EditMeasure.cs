@@ -1,4 +1,5 @@
-﻿using StoreManagmentSystem.Repos;
+﻿using StoreManagmentSystem.AssisstantClasses;
+using StoreManagmentSystem.Repos;
 using StoreManagmentSystem.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace StoreManagmentSystem.Sections.Measures
     public partial class EditMeasure : Form
     {
         MeasureDb db = new MeasureDb();
+        Assisstant Assisstant = new Assisstant();
         public EditMeasure()
         {
             InitializeComponent();
@@ -23,11 +25,8 @@ namespace StoreManagmentSystem.Sections.Measures
 
         private void settingCb_AllMeasures()
         {
-            List<AllMeasuresCb> measuresModifiedFormat = db.settingDisplayOfCb_AllMeasures(db.GetAllMeasures());
-
-            cb_selectMeasure.DisplayMember = "Description";
-            cb_selectMeasure.ValueMember = "Id";
-            cb_selectMeasure.DataSource = measuresModifiedFormat;
+            List<AllMeasuresCb> measuresModifiedFormat = Assisstant.settingDisplayOfCb_AllMeasures(db.GetAllMeasures());
+            Assisstant.FillCb<AllMeasuresCb>(cb_selectMeasure, "Description", "Id", measuresModifiedFormat);
 
         }
 
@@ -45,7 +44,7 @@ namespace StoreManagmentSystem.Sections.Measures
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            if (!IsEmpty())
+            if (!Assisstant.CheckIfFormIsEmpty(gb_measureDetails))
             {
                 Measure measure = new Measure
                 {
@@ -70,17 +69,6 @@ namespace StoreManagmentSystem.Sections.Measures
             {
                 MessageBox.Show("All fields are required to edit");
             }
-        }
-
-        private bool IsEmpty()
-        {
-            bool isEmpty = true;
-
-            if (txt_main.Text != string.Empty && txt_quantity.Text != string.Empty && txt_sub.Text != string.Empty)
-            {
-                isEmpty = false;
-            }
-            return isEmpty;
         }
 
         private void RefreshCb_AllMeasures()

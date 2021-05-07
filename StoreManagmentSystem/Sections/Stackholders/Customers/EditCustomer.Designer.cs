@@ -36,6 +36,7 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customers
             this.cb_viewBy = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gb_cstData = new System.Windows.Forms.GroupBox();
+            this.txt_cstId_hide = new System.Windows.Forms.TextBox();
             this.btn_edit = new System.Windows.Forms.Button();
             this.txt_cstTel = new System.Windows.Forms.TextBox();
             this.txt_cstWebsite = new System.Windows.Forms.TextBox();
@@ -49,7 +50,7 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customers
             this.lb_cstEmail = new System.Windows.Forms.Label();
             this.lb_cstWebsite = new System.Windows.Forms.Label();
             this.lb_cstName = new System.Windows.Forms.Label();
-            this.txt_cstId_hide = new System.Windows.Forms.TextBox();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gb_cstData.SuspendLayout();
             this.SuspendLayout();
@@ -136,6 +137,14 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customers
             this.gb_cstData.TabStop = false;
             this.gb_cstData.Text = "Customer Data";
             this.gb_cstData.Visible = false;
+            // 
+            // txt_cstId_hide
+            // 
+            this.txt_cstId_hide.Location = new System.Drawing.Point(38, 500);
+            this.txt_cstId_hide.Name = "txt_cstId_hide";
+            this.txt_cstId_hide.Size = new System.Drawing.Size(100, 26);
+            this.txt_cstId_hide.TabIndex = 2;
+            this.txt_cstId_hide.Visible = false;
             // 
             // btn_edit
             // 
@@ -243,19 +252,22 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customers
             this.lb_cstName.TabIndex = 13;
             this.lb_cstName.Text = "Name";
             // 
-            // txt_cstId_hide
+            // btn_refresh
             // 
-            this.txt_cstId_hide.Location = new System.Drawing.Point(38, 500);
-            this.txt_cstId_hide.Name = "txt_cstId_hide";
-            this.txt_cstId_hide.Size = new System.Drawing.Size(100, 26);
-            this.txt_cstId_hide.TabIndex = 2;
-            this.txt_cstId_hide.Visible = false;
+            this.btn_refresh.Location = new System.Drawing.Point(13, 525);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(93, 32);
+            this.btn_refresh.TabIndex = 2;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // EditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1103, 570);
+            this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.gb_cstData);
             this.Controls.Add(this.groupBox1);
             this.Name = "EditCustomer";
@@ -291,5 +303,6 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customers
         private System.Windows.Forms.Label lb_cstWebsite;
         private System.Windows.Forms.Label lb_cstName;
         private System.Windows.Forms.TextBox txt_cstId_hide;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }

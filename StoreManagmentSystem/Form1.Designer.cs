@@ -35,6 +35,10 @@ namespace StoreManagmentSystem
             this.newStoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editStoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteStoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.measuresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addMeasureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editMeasureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +61,7 @@ namespace StoreManagmentSystem
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.storesToolStripMenuItem,
+            this.itemsToolStripMenuItem,
             this.measuresToolStripMenuItem,
             this.stackholdersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -95,6 +100,37 @@ namespace StoreManagmentSystem
             this.deleteStoreToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
             this.deleteStoreToolStripMenuItem.Text = "Delete Store";
             this.deleteStoreToolStripMenuItem.Click += new System.EventHandler(this.deleteStoreToolStripMenuItem_Click);
+            // 
+            // itemsToolStripMenuItem
+            // 
+            this.itemsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem2,
+            this.editToolStripMenuItem2,
+            this.deleteToolStripMenuItem2});
+            this.itemsToolStripMenuItem.Name = "itemsToolStripMenuItem";
+            this.itemsToolStripMenuItem.Size = new System.Drawing.Size(72, 29);
+            this.itemsToolStripMenuItem.Text = "Items";
+            // 
+            // newToolStripMenuItem2
+            // 
+            this.newToolStripMenuItem2.Name = "newToolStripMenuItem2";
+            this.newToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
+            this.newToolStripMenuItem2.Text = "New Item";
+            this.newToolStripMenuItem2.Click += new System.EventHandler(this.newToolStripMenuItem2_Click);
+            // 
+            // editToolStripMenuItem2
+            // 
+            this.editToolStripMenuItem2.Name = "editToolStripMenuItem2";
+            this.editToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
+            this.editToolStripMenuItem2.Text = "Edit Item";
+            this.editToolStripMenuItem2.Click += new System.EventHandler(this.editToolStripMenuItem2_Click);
+            // 
+            // deleteToolStripMenuItem2
+            // 
+            this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
+            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
+            this.deleteToolStripMenuItem2.Text = "Delete Item";
+            this.deleteToolStripMenuItem2.Click += new System.EventHandler(this.deleteToolStripMenuItem2_Click);
             // 
             // measuresToolStripMenuItem
             // 
@@ -143,27 +179,27 @@ namespace StoreManagmentSystem
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.vendorToolStripMenuItem.Name = "vendorToolStripMenuItem";
-            this.vendorToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.vendorToolStripMenuItem.Size = new System.Drawing.Size(191, 34);
             this.vendorToolStripMenuItem.Text = "Vendor";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
             this.newToolStripMenuItem.Text = "New...";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
             this.editToolStripMenuItem.Text = "Edit...";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -174,7 +210,7 @@ namespace StoreManagmentSystem
             this.editToolStripMenuItem1,
             this.deleteToolStripMenuItem1});
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(191, 34);
             this.customerToolStripMenuItem.Text = "Customer";
             // 
             // newToolStripMenuItem1
@@ -239,6 +275,10 @@ namespace StoreManagmentSystem
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem itemsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem2;
     }
 }
 

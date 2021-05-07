@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoreManagmentSystem.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -55,6 +56,50 @@ namespace StoreManagmentSystem.AssisstantClasses
             }
         }
 
-        
+
+        public List<AllMeasuresCb> settingDisplayOfCb_AllMeasures(List<Measure> measures)
+        {
+            List<AllMeasuresCb> allMeasures = new List<AllMeasuresCb>();
+
+            foreach (var measure in measures)
+            {
+                AllMeasuresCb m = new AllMeasuresCb
+                {
+                    Id = measure.ID,
+                    Description = measure.Main_Measure + " - " + measure.Sub_Measure + " - " + measure.Quantity
+                };
+
+                allMeasures.Add(m);
+            }
+
+            return allMeasures;
+        }
+
+        public void FillCb<T>(ComboBox cb , string display , string value , List<T> source)
+        {
+            cb.ValueMember = value;
+            cb.DisplayMember = display;
+            cb.DataSource = source;
+        }
+
+        public List<AllItemsCb> SettingDisplayOfCb_AllItems(List<Item> items)
+        {
+            List<AllItemsCb> allItems = new List<AllItemsCb>();
+
+            foreach (var item in items)
+            {
+                AllItemsCb it = new AllItemsCb
+                {
+                    Id = item.ID,
+                    NameAndCode = item.Name + " - " + item.Code,
+                };
+
+                allItems.Add(it);
+            }
+
+            return allItems;
+        }
+
+
     }
 }

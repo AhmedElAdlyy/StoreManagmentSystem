@@ -30,10 +30,7 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customers
 
             List<StoreManagmentSystem.Customer> customers = db.GetAllCustomers();
 
-            cb_cst.ValueMember = "ID";
-            cb_cst.DisplayMember = filter;
-
-            cb_cst.DataSource = customers;
+            assisstant.FillCb<StoreManagmentSystem.Customer>(cb_cst, filter, "ID", customers);
         }
 
         private void btn_select_Click(object sender, EventArgs e)
@@ -80,6 +77,11 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customers
             cb_viewBy.Items.Clear();
             cb_cst.DataSource = null;
             assisstant.SettingCbFromLabelsText(gb_cstData, cb_viewBy);
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            RefreshCb_AllCustomers();
         }
     }
 }

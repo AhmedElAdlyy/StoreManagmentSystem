@@ -1,4 +1,5 @@
-﻿using StoreManagmentSystem.Repos;
+﻿using StoreManagmentSystem.AssisstantClasses;
+using StoreManagmentSystem.Repos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace StoreManagmentSystem
     {
 
         StoreDb db = new StoreDb();
+        Assisstant assisstant = new Assisstant();
 
         public AddStore()
         {
@@ -23,9 +25,8 @@ namespace StoreManagmentSystem
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            var empty = isEmpty();
-
-            if (!empty)
+            
+            if (!assisstant.CheckIfFormIsEmpty(gb_storeData))
             {
                 Store store = new Store
                 {
@@ -38,14 +39,12 @@ namespace StoreManagmentSystem
                 {
                     db.AddStore(store);
                     MessageBox.Show("Store Is Added Successfully");
+                    assisstant.ClearForm(gb_storeData);
                 }
                 catch (Exception)
                 {
-
                     MessageBox.Show("Data Is Incorrect");
                 }
-
-
             }
             else
             {
@@ -53,17 +52,9 @@ namespace StoreManagmentSystem
             }
         }
 
-        private bool isEmpty()
+        private void btn_clear_Click(object sender, EventArgs e)
         {
-            bool isEmpty = true;
-
-            if (txt_Name.Text != string.Empty && txt_address.Text != string.Empty && txt_Employee.Text != string.Empty)
-            {
-                isEmpty = false;
-            }
-
-            return isEmpty;
-
+            assisstant.ClearForm(gb_storeData);
         }
     }
 }

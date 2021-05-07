@@ -43,11 +43,13 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.gb_venData.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_venData
             // 
+            this.gb_venData.Controls.Add(this.btn_clear);
             this.gb_venData.Controls.Add(this.btn_add);
             this.gb_venData.Controls.Add(this.txt_venTel);
             this.gb_venData.Controls.Add(this.txt_venWebsite);
@@ -174,6 +176,16 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
+            // btn_clear
+            // 
+            this.btn_clear.Location = new System.Drawing.Point(457, 510);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(85, 33);
+            this.btn_clear.TabIndex = 14;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
             // AddVendor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -204,5 +216,6 @@ namespace StoreManagmentSystem.Sections.Stackholders.Vendors
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_clear;
     }
 }

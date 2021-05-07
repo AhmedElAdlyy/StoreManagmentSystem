@@ -1,4 +1,5 @@
-﻿using StoreManagmentSystem.Repos;
+﻿using StoreManagmentSystem.AssisstantClasses;
+using StoreManagmentSystem.Repos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,19 +15,11 @@ namespace StoreManagmentSystem.Stores
     public partial class DeleteStore : Form
     {
         StoreDb db = new StoreDb();
+        Assisstant assisstant = new Assisstant();
         public DeleteStore()
         {
             InitializeComponent();
-            SettingCb_allStores();
-        }
-
-        private void SettingCb_allStores()
-        {
-            List<Store> stores = db.GetAllStores();
-
-            cb_allStores.DisplayMember = "Name";
-            cb_allStores.ValueMember = "ID";
-            cb_allStores.DataSource = stores;
+            assisstant.FillCb<Store>(cb_allStores, "Name", "ID", db.GetAllStores());
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -70,7 +63,13 @@ namespace StoreManagmentSystem.Stores
         private void RefreshCb_AllStores()
         {
             cb_allStores.DataSource = null;
-            SettingCb_allStores();
+            assisstant.FillCb<Store>(cb_allStores, "Name", "ID", db.GetAllStores());
+            gb_storeData.Visible = false;
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            RefreshCb_AllStores();
         }
     }
 }

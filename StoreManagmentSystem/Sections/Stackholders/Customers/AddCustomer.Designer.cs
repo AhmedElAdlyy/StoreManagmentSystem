@@ -30,24 +30,26 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customer
         private void InitializeComponent()
         {
             this.gb_cstData = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_cstName = new System.Windows.Forms.TextBox();
-            this.txt_cstMob = new System.Windows.Forms.TextBox();
-            this.txt_cstFax = new System.Windows.Forms.TextBox();
-            this.txt_cstEmail = new System.Windows.Forms.TextBox();
-            this.txt_cstWebsite = new System.Windows.Forms.TextBox();
-            this.txt_cstTel = new System.Windows.Forms.TextBox();
             this.btn_add = new System.Windows.Forms.Button();
+            this.txt_cstTel = new System.Windows.Forms.TextBox();
+            this.txt_cstWebsite = new System.Windows.Forms.TextBox();
+            this.txt_cstEmail = new System.Windows.Forms.TextBox();
+            this.txt_cstFax = new System.Windows.Forms.TextBox();
+            this.txt_cstMob = new System.Windows.Forms.TextBox();
+            this.txt_cstName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.gb_cstData.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_cstData
             // 
+            this.gb_cstData.Controls.Add(this.btn_clear);
             this.gb_cstData.Controls.Add(this.btn_add);
             this.gb_cstData.Controls.Add(this.txt_cstTel);
             this.gb_cstData.Controls.Add(this.txt_cstWebsite);
@@ -68,50 +70,57 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customer
             this.gb_cstData.TabStop = false;
             this.gb_cstData.Text = "Customer Data";
             // 
-            // label1
+            // btn_add
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
+            this.btn_add.Location = new System.Drawing.Point(186, 500);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(110, 43);
+            this.btn_add.TabIndex = 12;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // label2
+            // txt_cstTel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 442);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Website";
+            this.txt_cstTel.Location = new System.Drawing.Point(228, 124);
+            this.txt_cstTel.Name = "txt_cstTel";
+            this.txt_cstTel.Size = new System.Drawing.Size(301, 26);
+            this.txt_cstTel.TabIndex = 11;
             // 
-            // label3
+            // txt_cstWebsite
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(66, 368);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Email";
+            this.txt_cstWebsite.Location = new System.Drawing.Point(228, 439);
+            this.txt_cstWebsite.Name = "txt_cstWebsite";
+            this.txt_cstWebsite.Size = new System.Drawing.Size(301, 26);
+            this.txt_cstWebsite.TabIndex = 10;
             // 
-            // label4
+            // txt_cstEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(66, 297);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Fax";
+            this.txt_cstEmail.Location = new System.Drawing.Point(228, 365);
+            this.txt_cstEmail.Name = "txt_cstEmail";
+            this.txt_cstEmail.Size = new System.Drawing.Size(301, 26);
+            this.txt_cstEmail.TabIndex = 9;
             // 
-            // label5
+            // txt_cstFax
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(66, 212);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Mobile";
+            this.txt_cstFax.Location = new System.Drawing.Point(228, 294);
+            this.txt_cstFax.Name = "txt_cstFax";
+            this.txt_cstFax.Size = new System.Drawing.Size(301, 26);
+            this.txt_cstFax.TabIndex = 8;
+            // 
+            // txt_cstMob
+            // 
+            this.txt_cstMob.Location = new System.Drawing.Point(228, 209);
+            this.txt_cstMob.Name = "txt_cstMob";
+            this.txt_cstMob.Size = new System.Drawing.Size(301, 26);
+            this.txt_cstMob.TabIndex = 7;
+            // 
+            // txt_cstName
+            // 
+            this.txt_cstName.Location = new System.Drawing.Point(228, 44);
+            this.txt_cstName.Name = "txt_cstName";
+            this.txt_cstName.Size = new System.Drawing.Size(301, 26);
+            this.txt_cstName.TabIndex = 6;
             // 
             // label6
             // 
@@ -122,57 +131,60 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customer
             this.label6.TabIndex = 5;
             this.label6.Text = "Telephone";
             // 
-            // txt_cstName
+            // label5
             // 
-            this.txt_cstName.Location = new System.Drawing.Point(228, 44);
-            this.txt_cstName.Name = "txt_cstName";
-            this.txt_cstName.Size = new System.Drawing.Size(301, 26);
-            this.txt_cstName.TabIndex = 6;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(66, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Mobile";
             // 
-            // txt_cstMob
+            // label4
             // 
-            this.txt_cstMob.Location = new System.Drawing.Point(228, 209);
-            this.txt_cstMob.Name = "txt_cstMob";
-            this.txt_cstMob.Size = new System.Drawing.Size(301, 26);
-            this.txt_cstMob.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(66, 297);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Fax";
             // 
-            // txt_cstFax
+            // label3
             // 
-            this.txt_cstFax.Location = new System.Drawing.Point(228, 294);
-            this.txt_cstFax.Name = "txt_cstFax";
-            this.txt_cstFax.Size = new System.Drawing.Size(301, 26);
-            this.txt_cstFax.TabIndex = 8;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(66, 368);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Email";
             // 
-            // txt_cstEmail
+            // label2
             // 
-            this.txt_cstEmail.Location = new System.Drawing.Point(228, 365);
-            this.txt_cstEmail.Name = "txt_cstEmail";
-            this.txt_cstEmail.Size = new System.Drawing.Size(301, 26);
-            this.txt_cstEmail.TabIndex = 9;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(66, 442);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Website";
             // 
-            // txt_cstWebsite
+            // label1
             // 
-            this.txt_cstWebsite.Location = new System.Drawing.Point(228, 439);
-            this.txt_cstWebsite.Name = "txt_cstWebsite";
-            this.txt_cstWebsite.Size = new System.Drawing.Size(301, 26);
-            this.txt_cstWebsite.TabIndex = 10;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(66, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name";
             // 
-            // txt_cstTel
+            // btn_clear
             // 
-            this.txt_cstTel.Location = new System.Drawing.Point(228, 124);
-            this.txt_cstTel.Name = "txt_cstTel";
-            this.txt_cstTel.Size = new System.Drawing.Size(301, 26);
-            this.txt_cstTel.TabIndex = 11;
-            // 
-            // btn_add
-            // 
-            this.btn_add.Location = new System.Drawing.Point(186, 500);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(110, 43);
-            this.btn_add.TabIndex = 12;
-            this.btn_add.Text = "Add";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            this.btn_clear.Location = new System.Drawing.Point(457, 509);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(85, 33);
+            this.btn_clear.TabIndex = 13;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // AddCustomer
             // 
@@ -204,5 +216,6 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customer
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_clear;
     }
 }

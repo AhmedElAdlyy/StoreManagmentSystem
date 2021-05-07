@@ -29,7 +29,7 @@ namespace StoreManagmentSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gb_storeData = new System.Windows.Forms.GroupBox();
             this.btn_add = new System.Windows.Forms.Button();
             this.txt_Employee = new System.Windows.Forms.TextBox();
             this.txt_address = new System.Windows.Forms.TextBox();
@@ -37,24 +37,25 @@ namespace StoreManagmentSystem
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.gb_storeData.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gb_storeData
             // 
-            this.groupBox1.Controls.Add(this.btn_add);
-            this.groupBox1.Controls.Add(this.txt_Employee);
-            this.groupBox1.Controls.Add(this.txt_address);
-            this.groupBox1.Controls.Add(this.txt_Name);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(76, 87);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(518, 445);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Adding Store";
+            this.gb_storeData.Controls.Add(this.btn_add);
+            this.gb_storeData.Controls.Add(this.txt_Employee);
+            this.gb_storeData.Controls.Add(this.txt_address);
+            this.gb_storeData.Controls.Add(this.txt_Name);
+            this.gb_storeData.Controls.Add(this.label3);
+            this.gb_storeData.Controls.Add(this.label2);
+            this.gb_storeData.Controls.Add(this.label1);
+            this.gb_storeData.Location = new System.Drawing.Point(76, 87);
+            this.gb_storeData.Name = "gb_storeData";
+            this.gb_storeData.Size = new System.Drawing.Size(518, 445);
+            this.gb_storeData.TabIndex = 0;
+            this.gb_storeData.TabStop = false;
+            this.gb_storeData.Text = "Adding Store";
             // 
             // btn_add
             // 
@@ -114,23 +115,34 @@ namespace StoreManagmentSystem
             this.label1.TabIndex = 0;
             this.label1.Text = "Store Name";
             // 
+            // btn_clear
+            // 
+            this.btn_clear.Location = new System.Drawing.Point(578, 558);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(82, 34);
+            this.btn_clear.TabIndex = 1;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
             // AddStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 597);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.gb_storeData);
             this.Name = "AddStore";
             this.Text = "AddStore";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gb_storeData.ResumeLayout(false);
+            this.gb_storeData.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gb_storeData;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.TextBox txt_Employee;
         private System.Windows.Forms.TextBox txt_address;
@@ -138,5 +150,6 @@ namespace StoreManagmentSystem
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_clear;
     }
 }

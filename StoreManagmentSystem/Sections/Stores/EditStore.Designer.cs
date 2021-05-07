@@ -41,6 +41,7 @@ namespace StoreManagmentSystem.Stores
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_storeId_hide = new System.Windows.Forms.TextBox();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.gb_selectStore.SuspendLayout();
             this.gb_storeData.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +50,7 @@ namespace StoreManagmentSystem.Stores
             // 
             this.gb_selectStore.Controls.Add(this.btn_select);
             this.gb_selectStore.Controls.Add(this.cb_allStores);
-            this.gb_selectStore.Location = new System.Drawing.Point(125, 23);
+            this.gb_selectStore.Location = new System.Drawing.Point(105, 23);
             this.gb_selectStore.Name = "gb_selectStore";
             this.gb_selectStore.Size = new System.Drawing.Size(406, 104);
             this.gb_selectStore.TabIndex = 0;
@@ -83,7 +84,7 @@ namespace StoreManagmentSystem.Stores
             this.gb_storeData.Controls.Add(this.label3);
             this.gb_storeData.Controls.Add(this.label2);
             this.gb_storeData.Controls.Add(this.label1);
-            this.gb_storeData.Location = new System.Drawing.Point(93, 183);
+            this.gb_storeData.Location = new System.Drawing.Point(70, 168);
             this.gb_storeData.Name = "gb_storeData";
             this.gb_storeData.Size = new System.Drawing.Size(497, 381);
             this.gb_storeData.TabIndex = 1;
@@ -151,17 +152,28 @@ namespace StoreManagmentSystem.Stores
             // 
             // txt_storeId_hide
             // 
-            this.txt_storeId_hide.Location = new System.Drawing.Point(258, 151);
+            this.txt_storeId_hide.Location = new System.Drawing.Point(258, 130);
             this.txt_storeId_hide.Name = "txt_storeId_hide";
             this.txt_storeId_hide.Size = new System.Drawing.Size(100, 26);
             this.txt_storeId_hide.TabIndex = 2;
             this.txt_storeId_hide.Visible = false;
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Location = new System.Drawing.Point(555, 551);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(96, 39);
+            this.btn_refresh.TabIndex = 10;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // EditStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 597);
+            this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.txt_storeId_hide);
             this.Controls.Add(this.gb_storeData);
             this.Controls.Add(this.gb_selectStore);
@@ -189,5 +201,6 @@ namespace StoreManagmentSystem.Stores
         private System.Windows.Forms.TextBox txt_address;
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.TextBox txt_storeId_hide;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }

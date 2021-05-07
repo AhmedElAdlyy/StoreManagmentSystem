@@ -1,4 +1,5 @@
-﻿using StoreManagmentSystem.Repos;
+﻿using StoreManagmentSystem.AssisstantClasses;
+using StoreManagmentSystem.Repos;
 using StoreManagmentSystem.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace StoreManagmentSystem.Sections.Measures
     public partial class DeleteMeasure : Form
     {
         MeasureDb db = new MeasureDb();
+        Assisstant Assisstant = new Assisstant();
         public DeleteMeasure()
         {
             InitializeComponent();
@@ -23,11 +25,8 @@ namespace StoreManagmentSystem.Sections.Measures
 
         private void settingCb_AllMeasures()
         {
-            List<AllMeasuresCb> measuresModifiedFormat = db.settingDisplayOfCb_AllMeasures(db.GetAllMeasures());
-
-            cb_selectMeasure.DisplayMember = "Description";
-            cb_selectMeasure.ValueMember = "Id";
-            cb_selectMeasure.DataSource = measuresModifiedFormat;
+            List<AllMeasuresCb> measuresModifiedFormat = Assisstant.settingDisplayOfCb_AllMeasures(db.GetAllMeasures());
+            Assisstant.FillCb<AllMeasuresCb>(cb_selectMeasure, "Description", "Id", measuresModifiedFormat);
 
         }
 
