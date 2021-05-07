@@ -95,6 +95,24 @@
     <Compile Include="Sections\Stackholders\Customers\EditCustomer.Designer.cs">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sections\Stackholders\Vendors\AddVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Stackholders\Vendors\AddVendor.Designer.cs">
+      <DependentUpon>AddVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\Stackholders\Vendors\DeleteVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Stackholders\Vendors\DeleteVendor.Designer.cs">
+      <DependentUpon>DeleteVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\Stackholders\Vendors\EditVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Stackholders\Vendors\EditVendor.Designer.cs">
+      <DependentUpon>EditVendor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sections\Stores\AddStore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +169,15 @@
     <EmbeddedResource Include="Sections\Stackholders\Customers\EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Stackholders\Vendors\AddVendor.resx">
+      <DependentUpon>AddVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Stackholders\Vendors\DeleteVendor.resx">
+      <DependentUpon>DeleteVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Stackholders\Vendors\EditVendor.resx">
+      <DependentUpon>EditVendor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sections\Stores\AddStore.resx">
       <DependentUpon>AddStore.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,8 +217,6 @@
   <ItemGroup>
     <None Include="Resources\factory-3550551_1920.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Sections\Stackholders\Vendors\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

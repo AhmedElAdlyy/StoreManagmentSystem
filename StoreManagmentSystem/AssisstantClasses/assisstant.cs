@@ -44,6 +44,17 @@ namespace StoreManagmentSystem.AssisstantClasses
             return isEmpty;
         }
 
+        public void ClearForm(GroupBox gb)
+        {
+            foreach (Control ctrl in gb.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    ctrl.Text = string.Empty;
+                }
+            }
+        }
+
         
     }
 }

@@ -1,6 +1,7 @@
 ﻿using StoreManagmentSystem.Sections.Measures;
 using StoreManagmentSystem.Sections.Stackholders.Customer;
 using StoreManagmentSystem.Sections.Stackholders.Customers;
+using StoreManagmentSystem.Sections.Stackholders.Vendors;
 using StoreManagmentSystem.Stores;
 using System;
 using System.Collections.Generic;
@@ -82,6 +83,27 @@ namespace StoreManagmentSystem
             DeleteCustomer deleteCustomer = new DeleteCustomer();
             deleteCustomer.MdiParent = this;
             deleteCustomer.Show();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddVendor addVendor = new AddVendor();
+            addVendor.MdiParent = this;
+            addVendor.Show();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditVendor editVendor = new EditVendor();
+            editVendor.MdiParent = this;
+            editVendor.Show();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteVendor deleteVendor = new DeleteVendor();
+            deleteVendor.MdiParent = this;
+            deleteVendor.Show();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using StoreManagmentSystem.AssisstantClasses;
-using StoreManagmentSystem.Repos;
+﻿using StoreManagmentSystem.Repos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +16,6 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customer
     {
 
         CustomerDb db = new CustomerDb();
-        Assisstant assisstant = new Assisstant();
 
         public AddCustomer()
         {
@@ -27,7 +25,7 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customer
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            if (!assisstant.CheckIfFormIsEmpty(gb_cstData))
+            if (!IsEmpty())
             {
                 StoreManagmentSystem.Customer cst = new StoreManagmentSystem.Customer
                 {
@@ -43,7 +41,6 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customer
                 {
                     db.AddCustomer(cst);
                     MessageBox.Show("Customer Added Successfully");
-                    assisstant.ClearForm(gb_cstData);
                 }
                 catch (Exception)
                 {
@@ -56,6 +53,31 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customer
                 MessageBox.Show("All fields are requires");
             }
         }
+
+
+
+        private bool IsEmpty()
+        {
+            bool isEmpty = true;
+
+            foreach (Control ctrl in this.gb_cstData.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    if (ctrl.Text != string.Empty)
+                    {
+                        isEmpty = false;
+                    }
+                    else
+                    {
+                        isEmpty = true;
+                        return isEmpty;
+                    }
+                }
+            }
+            return isEmpty;
+        }
+
 
     }
 }

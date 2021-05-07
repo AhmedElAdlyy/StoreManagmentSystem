@@ -32,12 +32,12 @@ namespace StoreManagmentSystem.Repos
         {
             Vendor vendor = GetVendorById(ven.ID);
 
-            vendor.Mobile = vendor.Mobile;
-            vendor.Name = vendor.Name;
-            vendor.Telephone = vendor.Telephone;
-            vendor.Email = vendor.Email;
-            vendor.Website = vendor.Website;
-            vendor.Fax = vendor.Fax;
+            vendor.Mobile = ven.Mobile;
+            vendor.Name = ven.Name;
+            vendor.Telephone = ven.Telephone;
+            vendor.Email = ven.Email;
+            vendor.Website = ven.Website;
+            vendor.Fax = ven.Fax;
 
             db.SaveChanges();
 

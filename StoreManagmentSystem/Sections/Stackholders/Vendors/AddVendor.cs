@@ -1,5 +1,6 @@
 ﻿using StoreManagmentSystem.AssisstantClasses;
 using StoreManagmentSystem.Repos;
+using StoreManagmentSystem.Sections.Stackholders.Customer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,40 +11,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace StoreManagmentSystem.Sections.Stackholders.Customer
+namespace StoreManagmentSystem.Sections.Stackholders.Vendors
 {
-    public partial class AddCustomer : Form
+    public partial class AddVendor : Form
     {
-
-        CustomerDb db = new CustomerDb();
+        VendorDb db = new VendorDb();
         Assisstant assisstant = new Assisstant();
-
-        public AddCustomer()
+        public AddVendor()
         {
             InitializeComponent();
         }
 
-
         private void btn_add_Click(object sender, EventArgs e)
         {
-            if (!assisstant.CheckIfFormIsEmpty(gb_cstData))
+            if (!assisstant.CheckIfFormIsEmpty(gb_venData))
             {
-                StoreManagmentSystem.Customer cst = new StoreManagmentSystem.Customer
+                Vendor vendor = new Vendor
                 {
-                    Name = txt_cstName.Text,
-                    Email = txt_cstEmail.Text,
-                    Fax = txt_cstFax.Text,
-                    Mobile = txt_cstMob.Text,
-                    Telephone = txt_cstTel.Text,
-                    Website = txt_cstWebsite.Text
+                    Email = txt_venEmail.Text,
+                    Fax = txt_venFax.Text,
+                    Mobile = txt_venMob.Text,
+                    Name = txt_venName.Text,
+                    Telephone = txt_venTel.Text,
+                    Website = txt_venWebsite.Text
                 };
 
                 try
                 {
-                    db.AddCustomer(cst);
-                    MessageBox.Show("Customer Added Successfully");
-                    assisstant.ClearForm(gb_cstData);
+                    db.AddVendor(vendor);
+                    MessageBox.Show("Vendor Added Successfully");
+                    assisstant.ClearForm(gb_venData);
                 }
                 catch (Exception)
                 {
@@ -56,6 +53,5 @@ namespace StoreManagmentSystem.Sections.Stackholders.Customer
                 MessageBox.Show("All fields are requires");
             }
         }
-
     }
 }
