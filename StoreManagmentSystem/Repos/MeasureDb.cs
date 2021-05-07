@@ -53,5 +53,10 @@ namespace StoreManagmentSystem.Repos
             db.SaveChanges();
         }
 
+        public Measure GetMeasureByItem(int itemId)
+        {
+            return db.Items.Find(itemId).Measure;
+        }
+
     }
 }

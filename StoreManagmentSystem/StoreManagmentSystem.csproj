@@ -59,7 +59,14 @@
     <Compile Include="Repos\CustomerDb.cs" />
     <Compile Include="Repos\ItemDb.cs" />
     <Compile Include="Repos\MeasureDb.cs" />
+    <Compile Include="Repos\SupplyInvoiceDb.cs" />
     <Compile Include="Repos\VendorDb.cs" />
+    <Compile Include="Sections\Invoices\SupplyInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Invoices\SupplyInvoice.Designer.cs">
+      <DependentUpon>SupplyInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sections\Items\AddItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +178,12 @@
     </Compile>
     <Compile Include="ViewModels\AllItemsCb.cs" />
     <Compile Include="ViewModels\AllMeasuresCb.cs" />
+    <Compile Include="ViewModels\FullSupplyInvoice.cs" />
+    <Compile Include="ViewModels\SupplyInvoiceViewModels\SupplyInvoiceDataGridViewModel.cs" />
+    <Compile Include="ViewModels\SupplyInvoiceViewModels\SupplyInvoiceViewModel.cs" />
+    <EmbeddedResource Include="Sections\Invoices\SupplyInvoice.resx">
+      <DependentUpon>SupplyInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sections\Items\AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
     </EmbeddedResource>

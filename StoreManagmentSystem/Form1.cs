@@ -1,4 +1,5 @@
-﻿using StoreManagmentSystem.Sections.Items;
+﻿using StoreManagmentSystem.Sections.Invoices;
+using StoreManagmentSystem.Sections.Items;
 using StoreManagmentSystem.Sections.Measures;
 using StoreManagmentSystem.Sections.Stackholders.Customer;
 using StoreManagmentSystem.Sections.Stackholders.Customers;
@@ -126,6 +127,13 @@ namespace StoreManagmentSystem
             DeleteItem deleteItem = new DeleteItem();
             deleteItem.MdiParent = this;
             deleteItem.Show();
+        }
+
+        private void supplyInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SupplyInvoice supplyInvoice = new SupplyInvoice();
+            supplyInvoice.MdiParent = this;
+            supplyInvoice.Show();            
         }
     }
 }

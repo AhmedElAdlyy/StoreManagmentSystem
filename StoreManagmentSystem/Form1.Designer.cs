@@ -52,6 +52,8 @@ namespace StoreManagmentSystem
             this.newToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.invoicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.supplyInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +65,8 @@ namespace StoreManagmentSystem
             this.storesToolStripMenuItem,
             this.itemsToolStripMenuItem,
             this.measuresToolStripMenuItem,
-            this.stackholdersToolStripMenuItem});
+            this.stackholdersToolStripMenuItem,
+            this.invoicesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
@@ -114,21 +117,21 @@ namespace StoreManagmentSystem
             // newToolStripMenuItem2
             // 
             this.newToolStripMenuItem2.Name = "newToolStripMenuItem2";
-            this.newToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
+            this.newToolStripMenuItem2.Size = new System.Drawing.Size(205, 34);
             this.newToolStripMenuItem2.Text = "New Item";
             this.newToolStripMenuItem2.Click += new System.EventHandler(this.newToolStripMenuItem2_Click);
             // 
             // editToolStripMenuItem2
             // 
             this.editToolStripMenuItem2.Name = "editToolStripMenuItem2";
-            this.editToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
+            this.editToolStripMenuItem2.Size = new System.Drawing.Size(205, 34);
             this.editToolStripMenuItem2.Text = "Edit Item";
             this.editToolStripMenuItem2.Click += new System.EventHandler(this.editToolStripMenuItem2_Click);
             // 
             // deleteToolStripMenuItem2
             // 
             this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
-            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
+            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(205, 34);
             this.deleteToolStripMenuItem2.Text = "Delete Item";
             this.deleteToolStripMenuItem2.Click += new System.EventHandler(this.deleteToolStripMenuItem2_Click);
             // 
@@ -234,6 +237,21 @@ namespace StoreManagmentSystem
             this.deleteToolStripMenuItem1.Text = "Delete";
             this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
             // 
+            // invoicesToolStripMenuItem
+            // 
+            this.invoicesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.supplyInvoiceToolStripMenuItem});
+            this.invoicesToolStripMenuItem.Name = "invoicesToolStripMenuItem";
+            this.invoicesToolStripMenuItem.Size = new System.Drawing.Size(92, 29);
+            this.invoicesToolStripMenuItem.Text = "Invoices";
+            // 
+            // supplyInvoiceToolStripMenuItem
+            // 
+            this.supplyInvoiceToolStripMenuItem.Name = "supplyInvoiceToolStripMenuItem";
+            this.supplyInvoiceToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.supplyInvoiceToolStripMenuItem.Text = "Supply Invoice";
+            this.supplyInvoiceToolStripMenuItem.Click += new System.EventHandler(this.supplyInvoiceToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -279,6 +297,8 @@ namespace StoreManagmentSystem
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem invoicesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem supplyInvoiceToolStripMenuItem;
     }
 }
 

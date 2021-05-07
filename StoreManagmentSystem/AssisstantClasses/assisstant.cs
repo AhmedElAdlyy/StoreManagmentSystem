@@ -22,7 +22,6 @@ namespace StoreManagmentSystem.AssisstantClasses
             }
 
         }
-
         public bool CheckIfFormIsEmpty(GroupBox gb)
         {
             bool isEmpty = true;
@@ -75,7 +74,7 @@ namespace StoreManagmentSystem.AssisstantClasses
             return allMeasures;
         }
 
-        public void FillCb<T>(ComboBox cb , string display , string value , List<T> source)
+        public void FillCb<T>(ComboBox cb, string display, string value, List<T> source)
         {
             cb.ValueMember = value;
             cb.DisplayMember = display;
@@ -98,6 +97,22 @@ namespace StoreManagmentSystem.AssisstantClasses
             }
 
             return allItems;
+        }
+
+        public int GetCurrnetInvoiceNo<t>(List<t> allInvoices)
+        {
+            var no = allInvoices.Count;
+            int current;
+            if (no == 0)
+            {
+                current = 1;
+            }
+            else
+            {
+                current = no++;
+            }
+
+            return current;
         }
 
 
