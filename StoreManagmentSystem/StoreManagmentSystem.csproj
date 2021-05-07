@@ -58,6 +58,7 @@
     <Compile Include="AssisstantClasses\Assisstant.cs" />
     <Compile Include="Repos\CustomerDb.cs" />
     <Compile Include="Repos\MeasureDb.cs" />
+    <Compile Include="Repos\VendorDb.cs" />
     <Compile Include="Sections\Measures\AddMeasure.cs">
       <SubType>Form</SubType>
     </Compile>
