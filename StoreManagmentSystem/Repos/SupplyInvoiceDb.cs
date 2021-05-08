@@ -57,5 +57,43 @@ namespace StoreManagmentSystem.Repos
 
             }
         }
+
+        public List<Supply_Invoice> GetSupplyInvoicesByInvoiceNo(int invoiceNo)
+        {
+            return db.Supply_Invoice.Where(w => w.Invoice_No == invoiceNo).ToList();
+        }
+        
+        public void EditSupplyInvoice(FullSupplyInvoice fullSupplyInvoice)
+        {
+            List<SupplyInvoiceViewModel> details = fullSupplyInvoice.SupplyInvoiceDetails;
+            List<Supply_Invoice> rows = db.Supply_Invoice.Where(w => w.Invoice_No == fullSupplyInvoice.InvoiceNo).ToList();
+            foreach (var row in rows)
+            {
+                row.Vendor_ID = fullSupplyInvoice.VendorId;
+            }
+
+            for (int i = 0; i < fullSupplyInvoice.SupplyInvoiceDetails.Count; i++)
+            {
+                rows[i].Store_Item_Quantity.Measure_Name = details[i].UsedUnit;
+                rows[i].Store_Item_Quantity.Quantity = details[i].Quantity;
+                rows[i].Store_Item_Quantity.Notes = details[i].Note;
+                rows[i].Store_Item_Quantity.Store_Item.Production_Date = details[i].ProductionDate;
+                rows[i].Store_Item_Quantity.Store_Item.Expiring_Date = details[i].ExpiringDate;
+                rows[i].Store_Item_Quantity.Store_Item.Store_ID = details[i].StoreId;
+                rows[i].Store_Item_Quantity.Store_Item.Item_ID = details[i].ItemId;
+            }
+
+            db.SaveChanges();
+
+            
+
+            
+
+
+            
+
+
+        }
+
     }
 }

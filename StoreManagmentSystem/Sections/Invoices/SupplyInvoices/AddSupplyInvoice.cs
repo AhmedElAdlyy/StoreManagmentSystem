@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace StoreManagmentSystem.Sections.Invoices
 {
-    public partial class SupplyInvoice : Form
+    public partial class AddSupplyInvoice : Form
     {
         SupplyInvoiceDb db = new SupplyInvoiceDb();
         VendorDb venDb = new VendorDb();
@@ -26,7 +26,7 @@ namespace StoreManagmentSystem.Sections.Invoices
         List<SupplyInvoiceDataGridViewModel> dataGridViewModels = new List<SupplyInvoiceDataGridViewModel>();
         FullSupplyInvoice fullSupplyInvoice = new FullSupplyInvoice();
 
-        public SupplyInvoice()
+        public AddSupplyInvoice()
         {
             InitializeComponent();
             SettingMainInfoSection();
@@ -41,7 +41,7 @@ namespace StoreManagmentSystem.Sections.Invoices
         {
             txt_currentDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
             txt_invoiceNo.Text = assisstant.GetCurrnetInvoiceNo<Supply_Invoice>(db.GetAllSupplyInvoices()).ToString();
-            assisstant.FillCb<string>(cb_viewBy, null, null, new List<string> { "Name", "Telephone", "Mobile", "Fax", "Email", "Website" });
+            assisstant.FillCB_ViewBy(cb_viewBy);
         }
 
         private void cb_viewBy_SelectedIndexChanged(object sender, EventArgs e)
@@ -128,6 +128,7 @@ namespace StoreManagmentSystem.Sections.Invoices
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 db.AddSupplyInvoice(fullSupplyInvoice);
@@ -140,5 +141,7 @@ namespace StoreManagmentSystem.Sections.Invoices
             }
 
         }
+
+        
     }
 }

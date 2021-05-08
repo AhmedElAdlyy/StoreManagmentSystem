@@ -1,7 +1,7 @@
 ﻿
 namespace StoreManagmentSystem.Sections.Invoices
 {
-    partial class SupplyInvoice
+    partial class AddSupplyInvoice
     {
         
         #region Windows Form Designer generated code
@@ -26,21 +26,22 @@ namespace StoreManagmentSystem.Sections.Invoices
             this.gb_mainInfo = new System.Windows.Forms.GroupBox();
             this.btn_cont = new System.Windows.Forms.Button();
             this.gb_itemData = new System.Windows.Forms.GroupBox();
-            this.btn_add = new System.Windows.Forms.Button();
+            this.pl_afterStore = new System.Windows.Forms.Panel();
             this.txt_note = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dp_ExpiringDate = new System.Windows.Forms.DateTimePicker();
-            this.cb_measures = new System.Windows.Forms.ComboBox();
-            this.cb_store = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cb_item = new System.Windows.Forms.ComboBox();
-            this.dp_productionDate = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.btn_add = new System.Windows.Forms.Button();
             this.nud_quantity = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dp_ExpiringDate = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cb_measures = new System.Windows.Forms.ComboBox();
+            this.dp_productionDate = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cb_store = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cb_item = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.lb_divider = new System.Windows.Forms.Label();
             this.gb_invoice = new System.Windows.Forms.GroupBox();
             this.pl_invoiceLabels = new System.Windows.Forms.Panel();
@@ -52,17 +53,16 @@ namespace StoreManagmentSystem.Sections.Invoices
             this.label13 = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
             this.dg_invoiceDetails = new System.Windows.Forms.DataGridView();
-            this.pl_afterStore = new System.Windows.Forms.Panel();
             this.gb_SIData.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pl_vendor.SuspendLayout();
             this.gb_mainInfo.SuspendLayout();
             this.gb_itemData.SuspendLayout();
+            this.pl_afterStore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_quantity)).BeginInit();
             this.gb_invoice.SuspendLayout();
             this.pl_invoiceLabels.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_invoiceDetails)).BeginInit();
-            this.pl_afterStore.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_SIData
@@ -206,6 +206,33 @@ namespace StoreManagmentSystem.Sections.Invoices
             this.gb_itemData.Text = "Item Data";
             this.gb_itemData.Visible = false;
             // 
+            // pl_afterStore
+            // 
+            this.pl_afterStore.Controls.Add(this.txt_note);
+            this.pl_afterStore.Controls.Add(this.btn_add);
+            this.pl_afterStore.Controls.Add(this.nud_quantity);
+            this.pl_afterStore.Controls.Add(this.label10);
+            this.pl_afterStore.Controls.Add(this.label8);
+            this.pl_afterStore.Controls.Add(this.dp_ExpiringDate);
+            this.pl_afterStore.Controls.Add(this.label4);
+            this.pl_afterStore.Controls.Add(this.cb_measures);
+            this.pl_afterStore.Controls.Add(this.dp_productionDate);
+            this.pl_afterStore.Controls.Add(this.label9);
+            this.pl_afterStore.Controls.Add(this.label5);
+            this.pl_afterStore.Location = new System.Drawing.Point(6, 83);
+            this.pl_afterStore.Name = "pl_afterStore";
+            this.pl_afterStore.Size = new System.Drawing.Size(913, 383);
+            this.pl_afterStore.TabIndex = 6;
+            this.pl_afterStore.Visible = false;
+            // 
+            // txt_note
+            // 
+            this.txt_note.Location = new System.Drawing.Point(152, 160);
+            this.txt_note.Multiline = true;
+            this.txt_note.Name = "txt_note";
+            this.txt_note.Size = new System.Drawing.Size(678, 146);
+            this.txt_note.TabIndex = 9;
+            // 
             // btn_add
             // 
             this.btn_add.Location = new System.Drawing.Point(395, 317);
@@ -216,13 +243,27 @@ namespace StoreManagmentSystem.Sections.Invoices
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // txt_note
+            // nud_quantity
             // 
-            this.txt_note.Location = new System.Drawing.Point(152, 160);
-            this.txt_note.Multiline = true;
-            this.txt_note.Name = "txt_note";
-            this.txt_note.Size = new System.Drawing.Size(678, 146);
-            this.txt_note.TabIndex = 9;
+            this.nud_quantity.Location = new System.Drawing.Point(605, 14);
+            this.nud_quantity.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.nud_quantity.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nud_quantity.Name = "nud_quantity";
+            this.nud_quantity.Size = new System.Drawing.Size(225, 26);
+            this.nud_quantity.TabIndex = 5;
+            this.nud_quantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label10
             // 
@@ -233,6 +274,15 @@ namespace StoreManagmentSystem.Sections.Invoices
             this.label10.TabIndex = 8;
             this.label10.Text = "Notes";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(484, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 20);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Quantity";
+            // 
             // dp_ExpiringDate
             // 
             this.dp_ExpiringDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -240,75 +290,6 @@ namespace StoreManagmentSystem.Sections.Invoices
             this.dp_ExpiringDate.Name = "dp_ExpiringDate";
             this.dp_ExpiringDate.Size = new System.Drawing.Size(225, 26);
             this.dp_ExpiringDate.TabIndex = 3;
-            // 
-            // cb_measures
-            // 
-            this.cb_measures.FormattingEnabled = true;
-            this.cb_measures.Location = new System.Drawing.Point(199, 14);
-            this.cb_measures.Name = "cb_measures";
-            this.cb_measures.Size = new System.Drawing.Size(222, 28);
-            this.cb_measures.TabIndex = 7;
-            // 
-            // cb_store
-            // 
-            this.cb_store.FormattingEnabled = true;
-            this.cb_store.Location = new System.Drawing.Point(613, 39);
-            this.cb_store.Name = "cb_store";
-            this.cb_store.Size = new System.Drawing.Size(223, 28);
-            this.cb_store.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(484, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Expiring Date";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(55, 45);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Item";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(49, 20);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 20);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Used Unit";
-            // 
-            // cb_item
-            // 
-            this.cb_item.FormattingEnabled = true;
-            this.cb_item.Location = new System.Drawing.Point(205, 39);
-            this.cb_item.Name = "cb_item";
-            this.cb_item.Size = new System.Drawing.Size(223, 28);
-            this.cb_item.TabIndex = 1;
-            this.cb_item.SelectedIndexChanged += new System.EventHandler(this.cb_item_SelectedIndexChanged);
-            // 
-            // dp_productionDate
-            // 
-            this.dp_productionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dp_productionDate.Location = new System.Drawing.Point(199, 94);
-            this.dp_productionDate.Name = "dp_productionDate";
-            this.dp_productionDate.Size = new System.Drawing.Size(223, 26);
-            this.dp_productionDate.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(490, 42);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 20);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "To Store";
             // 
             // label4
             // 
@@ -319,26 +300,79 @@ namespace StoreManagmentSystem.Sections.Invoices
             this.label4.TabIndex = 0;
             this.label4.Text = "Production Date";
             // 
-            // label8
+            // cb_measures
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(484, 17);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 20);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Quantity";
+            this.cb_measures.FormattingEnabled = true;
+            this.cb_measures.Location = new System.Drawing.Point(199, 14);
+            this.cb_measures.Name = "cb_measures";
+            this.cb_measures.Size = new System.Drawing.Size(222, 28);
+            this.cb_measures.TabIndex = 7;
             // 
-            // nud_quantity
+            // dp_productionDate
             // 
-            this.nud_quantity.Location = new System.Drawing.Point(605, 14);
-            this.nud_quantity.Name = "nud_quantity";
-            this.nud_quantity.Size = new System.Drawing.Size(225, 26);
-            this.nud_quantity.TabIndex = 5;
+            this.dp_productionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dp_productionDate.Location = new System.Drawing.Point(199, 94);
+            this.dp_productionDate.Name = "dp_productionDate";
+            this.dp_productionDate.Size = new System.Drawing.Size(223, 26);
+            this.dp_productionDate.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(49, 20);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 20);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Used Unit";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(484, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Expiring Date";
+            // 
+            // cb_store
+            // 
+            this.cb_store.FormattingEnabled = true;
+            this.cb_store.Location = new System.Drawing.Point(613, 39);
+            this.cb_store.Name = "cb_store";
+            this.cb_store.Size = new System.Drawing.Size(223, 28);
+            this.cb_store.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(55, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Item";
+            // 
+            // cb_item
+            // 
+            this.cb_item.FormattingEnabled = true;
+            this.cb_item.Location = new System.Drawing.Point(205, 39);
+            this.cb_item.Name = "cb_item";
+            this.cb_item.Size = new System.Drawing.Size(223, 28);
+            this.cb_item.TabIndex = 1;
+            this.cb_item.SelectedIndexChanged += new System.EventHandler(this.cb_item_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(490, 42);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 20);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "To Store";
             // 
             // lb_divider
             // 
             this.lb_divider.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lb_divider.Location = new System.Drawing.Point(950, 20);
+            this.lb_divider.Location = new System.Drawing.Point(972, 20);
             this.lb_divider.Name = "lb_divider";
             this.lb_divider.Size = new System.Drawing.Size(2, 900);
             this.lb_divider.TabIndex = 4;
@@ -451,26 +485,7 @@ namespace StoreManagmentSystem.Sections.Invoices
             this.dg_invoiceDetails.TabIndex = 6;
             this.dg_invoiceDetails.Visible = false;
             // 
-            // pl_afterStore
-            // 
-            this.pl_afterStore.Controls.Add(this.txt_note);
-            this.pl_afterStore.Controls.Add(this.btn_add);
-            this.pl_afterStore.Controls.Add(this.nud_quantity);
-            this.pl_afterStore.Controls.Add(this.label10);
-            this.pl_afterStore.Controls.Add(this.label8);
-            this.pl_afterStore.Controls.Add(this.dp_ExpiringDate);
-            this.pl_afterStore.Controls.Add(this.label4);
-            this.pl_afterStore.Controls.Add(this.cb_measures);
-            this.pl_afterStore.Controls.Add(this.dp_productionDate);
-            this.pl_afterStore.Controls.Add(this.label9);
-            this.pl_afterStore.Controls.Add(this.label5);
-            this.pl_afterStore.Location = new System.Drawing.Point(6, 83);
-            this.pl_afterStore.Name = "pl_afterStore";
-            this.pl_afterStore.Size = new System.Drawing.Size(913, 383);
-            this.pl_afterStore.TabIndex = 6;
-            this.pl_afterStore.Visible = false;
-            // 
-            // SupplyInvoice
+            // AddSupplyInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -481,7 +496,7 @@ namespace StoreManagmentSystem.Sections.Invoices
             this.Controls.Add(this.gb_mainInfo);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "SupplyInvoice";
+            this.Name = "AddSupplyInvoice";
             this.Text = "Supply Invoice";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.gb_SIData.ResumeLayout(false);
@@ -493,13 +508,13 @@ namespace StoreManagmentSystem.Sections.Invoices
             this.gb_mainInfo.ResumeLayout(false);
             this.gb_itemData.ResumeLayout(false);
             this.gb_itemData.PerformLayout();
+            this.pl_afterStore.ResumeLayout(false);
+            this.pl_afterStore.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_quantity)).EndInit();
             this.gb_invoice.ResumeLayout(false);
             this.pl_invoiceLabels.ResumeLayout(false);
             this.pl_invoiceLabels.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_invoiceDetails)).EndInit();
-            this.pl_afterStore.ResumeLayout(false);
-            this.pl_afterStore.PerformLayout();
             this.ResumeLayout(false);
 
         }

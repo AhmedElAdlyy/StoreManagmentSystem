@@ -1,4 +1,5 @@
 ﻿using StoreManagmentSystem.Sections.Invoices;
+using StoreManagmentSystem.Sections.Invoices.SupplyInvoices;
 using StoreManagmentSystem.Sections.Items;
 using StoreManagmentSystem.Sections.Measures;
 using StoreManagmentSystem.Sections.Stackholders.Customer;
@@ -129,11 +130,18 @@ namespace StoreManagmentSystem
             deleteItem.Show();
         }
 
-        private void supplyInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            SupplyInvoice supplyInvoice = new SupplyInvoice();
+            AddSupplyInvoice supplyInvoice = new AddSupplyInvoice();
             supplyInvoice.MdiParent = this;
-            supplyInvoice.Show();            
+            supplyInvoice.Show();
+        }
+
+        private void editToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            EditSupplyInvoice editSupplyInvoice = new EditSupplyInvoice();
+            editSupplyInvoice.MdiParent = this;
+            editSupplyInvoice.Show();
         }
     }
 }

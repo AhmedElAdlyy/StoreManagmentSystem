@@ -58,5 +58,13 @@ namespace StoreManagmentSystem.Repos
             return db.Items.Find(itemId).Measure;
         }
 
+        public List<string> GetMeasureItem(int invoiceId)
+        {
+            Measure measure = db.Supply_Invoice.Find(invoiceId).Store_Item_Quantity.Store_Item.Item.Measure;
+
+            return new List<string> { measure.Main_Measure, measure.Sub_Measure };
+
+        }
+
     }
 }

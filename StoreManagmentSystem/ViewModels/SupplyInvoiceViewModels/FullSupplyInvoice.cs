@@ -11,7 +11,6 @@ namespace StoreManagmentSystem.ViewModels
         public DateTime InvoiceDate { get; set; }
         public int InvoiceNo { get; set; }
         public int VendorId { get; set; }
-
-        public List<SupplyInvoiceViewModel> SupplyInvoiceDetails { get; set; }
+        public List<SupplyInvoiceViewModel> SupplyInvoiceDetails = new List<SupplyInvoiceViewModel>();
     }
 }

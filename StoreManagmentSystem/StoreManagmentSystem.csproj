@@ -59,13 +59,21 @@
     <Compile Include="Repos\CustomerDb.cs" />
     <Compile Include="Repos\ItemDb.cs" />
     <Compile Include="Repos\MeasureDb.cs" />
+    <Compile Include="Repos\StoreItemDb.cs" />
+    <Compile Include="Repos\StoreItemQuantityDb.cs" />
     <Compile Include="Repos\SupplyInvoiceDb.cs" />
     <Compile Include="Repos\VendorDb.cs" />
-    <Compile Include="Sections\Invoices\SupplyInvoice.cs">
+    <Compile Include="Sections\Invoices\SupplyInvoices\AddSupplyInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sections\Invoices\SupplyInvoice.Designer.cs">
-      <DependentUpon>SupplyInvoice.cs</DependentUpon>
+    <Compile Include="Sections\Invoices\SupplyInvoices\AddSupplyInvoice.Designer.cs">
+      <DependentUpon>AddSupplyInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\Invoices\SupplyInvoices\EditSupplyInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections\Invoices\SupplyInvoices\EditSupplyInvoice.Designer.cs">
+      <DependentUpon>EditSupplyInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="Sections\Items\AddItem.cs">
       <SubType>Form</SubType>
@@ -181,8 +189,11 @@
     <Compile Include="ViewModels\SupplyInvoiceViewModels\FullSupplyInvoice.cs" />
     <Compile Include="ViewModels\SupplyInvoiceViewModels\SupplyInvoiceDataGridViewModel.cs" />
     <Compile Include="ViewModels\SupplyInvoiceViewModels\SupplyInvoiceViewModel.cs" />
-    <EmbeddedResource Include="Sections\Invoices\SupplyInvoice.resx">
-      <DependentUpon>SupplyInvoice.cs</DependentUpon>
+    <EmbeddedResource Include="Sections\Invoices\SupplyInvoices\AddSupplyInvoice.resx">
+      <DependentUpon>AddSupplyInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections\Invoices\SupplyInvoices\EditSupplyInvoice.resx">
+      <DependentUpon>EditSupplyInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sections\Items\AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>

@@ -9,6 +9,7 @@ namespace StoreManagmentSystem.ViewModels
 {
     class SupplyInvoiceViewModel
     {
+        public int InvoiceId { get; set; }
         public int ItemId { get; set; }
         public int StoreId { get; set; }
         public string UsedUnit { get; set; }

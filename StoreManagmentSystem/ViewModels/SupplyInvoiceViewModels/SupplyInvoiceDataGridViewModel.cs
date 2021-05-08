@@ -9,6 +9,7 @@ namespace StoreManagmentSystem.ViewModels.SupplyInvoiceViewModels
 {
     class SupplyInvoiceDataGridViewModel
     {
+        public int InvoiceId { get; set; }
         [DisplayName("Item Name")]
         public string ItemName { get; set; }
         [DisplayName("Store Name")]

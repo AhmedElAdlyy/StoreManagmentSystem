@@ -115,6 +115,25 @@ namespace StoreManagmentSystem.AssisstantClasses
             return current;
         }
 
+        public List<string> SettingCb_DateDisplay(List<DateTime> dates)
+        {
+            List<string> outputDates = new List<string>();
+            outputDates.Add("---All---");
+
+            foreach (var date in dates)
+            {
+                outputDates.Add(date.ToString("dd/MM/yyyy"));
+            }
+
+            return outputDates;
+        }
+
+        public void FillCB_ViewBy(ComboBox cb)
+        {
+            FillCb<string>(cb, null, null, new List<string> {"---View Vendor By---" , "Name", "Telephone", "Mobile", "Fax", "Email", "Website" });
+        }
+
+        
 
     }
 }
