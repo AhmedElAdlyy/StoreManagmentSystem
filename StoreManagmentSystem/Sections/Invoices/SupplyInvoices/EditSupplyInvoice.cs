@@ -214,7 +214,17 @@ namespace StoreManagmentSystem.Sections.Invoices.SupplyInvoices
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            db.EditSupplyInvoice(fullSupplyInvoice);
+            try
+            {
+                db.EditSupplyInvoice(fullSupplyInvoice);
+                MessageBox.Show("Invoice Updated Successfully");
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something Went Wrong");
+            }
+            
         }
     }
 }
