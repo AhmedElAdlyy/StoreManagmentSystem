@@ -99,19 +99,18 @@ namespace StoreManagmentSystem.AssisstantClasses
             return allItems;
         }
 
-        public int GetCurrnetInvoiceNo<t>(List<t> allInvoices)
+        public int GetCurrnetInvoiceNo(List<int> invoicesNumbers)
         {
-            var no = allInvoices.Count;
             int current;
-            if (no == 0)
+            if(invoicesNumbers.Count == 0)
             {
                 current = 1;
             }
             else
             {
-                current = no++;
+                current = invoicesNumbers.Max();
+                current++;
             }
-
             return current;
         }
 

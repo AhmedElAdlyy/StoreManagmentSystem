@@ -1,4 +1,5 @@
 ﻿using StoreManagmentSystem.Sections.Invoices;
+using StoreManagmentSystem.Sections.Invoices.SalesInvoices;
 using StoreManagmentSystem.Sections.Invoices.SupplyInvoices;
 using StoreManagmentSystem.Sections.Items;
 using StoreManagmentSystem.Sections.Measures;
@@ -143,5 +144,12 @@ namespace StoreManagmentSystem
             editSupplyInvoice.MdiParent = this;
             editSupplyInvoice.Show();
         }
+
+        private void newToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            AddSalesInvoice addSalesInvoice = new AddSalesInvoice();
+            addSalesInvoice.MdiParent = this;
+            addSalesInvoice.Show();
+        } 
     }
 }

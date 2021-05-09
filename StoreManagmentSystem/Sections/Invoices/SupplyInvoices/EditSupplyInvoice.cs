@@ -20,19 +20,15 @@ namespace StoreManagmentSystem.Sections.Invoices.SupplyInvoices
         VendorDb venDb = new VendorDb();
         StoreDb storeDb = new StoreDb();
         ItemDb itemDb = new ItemDb();
-        StoreItemDb storeItemDb = new StoreItemDb();
         MeasureDb measureDb = new MeasureDb();
-        StoreItemQuantityDb storeItemQuantityDb = new StoreItemQuantityDb();
-
+        
         Assisstant assisstant = new Assisstant();
 
         FullSupplyInvoice fullSupplyInvoice = new FullSupplyInvoice();
-        //List<SupplyInvoiceDataGridViewModel> supplyInvoiceDataGridViewModels = new List<SupplyInvoiceDataGridViewModel>();
         public EditSupplyInvoice()
         {
             InitializeComponent();
             SettingSupplyInvoiceData();
-            
         }
 
         private void SettingSupplyInvoiceData()

@@ -56,6 +56,8 @@ namespace StoreManagmentSystem
             this.supplyInvoicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesInvoicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,21 +90,21 @@ namespace StoreManagmentSystem
             // newStoreToolStripMenuItem
             // 
             this.newStoreToolStripMenuItem.Name = "newStoreToolStripMenuItem";
-            this.newStoreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.newStoreToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
             this.newStoreToolStripMenuItem.Text = "New Store";
             this.newStoreToolStripMenuItem.Click += new System.EventHandler(this.newStoreToolStripMenuItem_Click);
             // 
             // editStoreToolStripMenuItem
             // 
             this.editStoreToolStripMenuItem.Name = "editStoreToolStripMenuItem";
-            this.editStoreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.editStoreToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
             this.editStoreToolStripMenuItem.Text = "Edit Store";
             this.editStoreToolStripMenuItem.Click += new System.EventHandler(this.editStoreToolStripMenuItem_Click);
             // 
             // deleteStoreToolStripMenuItem
             // 
             this.deleteStoreToolStripMenuItem.Name = "deleteStoreToolStripMenuItem";
-            this.deleteStoreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.deleteStoreToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
             this.deleteStoreToolStripMenuItem.Text = "Delete Store";
             this.deleteStoreToolStripMenuItem.Click += new System.EventHandler(this.deleteStoreToolStripMenuItem_Click);
             // 
@@ -242,7 +244,8 @@ namespace StoreManagmentSystem
             // invoicesToolStripMenuItem
             // 
             this.invoicesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.supplyInvoicesToolStripMenuItem});
+            this.supplyInvoicesToolStripMenuItem,
+            this.salesInvoicesToolStripMenuItem});
             this.invoicesToolStripMenuItem.Name = "invoicesToolStripMenuItem";
             this.invoicesToolStripMenuItem.Size = new System.Drawing.Size(92, 29);
             this.invoicesToolStripMenuItem.Text = "Invoices";
@@ -259,16 +262,31 @@ namespace StoreManagmentSystem
             // newToolStripMenuItem3
             // 
             this.newToolStripMenuItem3.Name = "newToolStripMenuItem3";
-            this.newToolStripMenuItem3.Size = new System.Drawing.Size(270, 34);
+            this.newToolStripMenuItem3.Size = new System.Drawing.Size(161, 34);
             this.newToolStripMenuItem3.Text = "New...";
             this.newToolStripMenuItem3.Click += new System.EventHandler(this.newToolStripMenuItem3_Click);
             // 
             // editToolStripMenuItem3
             // 
             this.editToolStripMenuItem3.Name = "editToolStripMenuItem3";
-            this.editToolStripMenuItem3.Size = new System.Drawing.Size(270, 34);
+            this.editToolStripMenuItem3.Size = new System.Drawing.Size(161, 34);
             this.editToolStripMenuItem3.Text = "Edit...";
             this.editToolStripMenuItem3.Click += new System.EventHandler(this.editToolStripMenuItem3_Click);
+            // 
+            // salesInvoicesToolStripMenuItem
+            // 
+            this.salesInvoicesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem4});
+            this.salesInvoicesToolStripMenuItem.Name = "salesInvoicesToolStripMenuItem";
+            this.salesInvoicesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.salesInvoicesToolStripMenuItem.Text = "Sales Invoices";
+            // 
+            // newToolStripMenuItem4
+            // 
+            this.newToolStripMenuItem4.Name = "newToolStripMenuItem4";
+            this.newToolStripMenuItem4.Size = new System.Drawing.Size(270, 34);
+            this.newToolStripMenuItem4.Text = "New...";
+            this.newToolStripMenuItem4.Click += new System.EventHandler(this.newToolStripMenuItem4_Click);
             // 
             // Form1
             // 
@@ -282,7 +300,7 @@ namespace StoreManagmentSystem
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Store Managment System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -319,6 +337,8 @@ namespace StoreManagmentSystem
         private System.Windows.Forms.ToolStripMenuItem supplyInvoicesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem salesInvoicesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem4;
     }
 }
 
